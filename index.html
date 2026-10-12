@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CiGo · La credencial de tu comunidad</title>
+  <meta name="description" content="Credencial infalsificable en el celular. Validación en el puesto con laptop y lector NFC, en un ciclo de unos 10 segundos. Piloto pionero de 50 pases." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="theme-color" content="#0a1018" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%230a1018' width='32' height='32' rx='8'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%233da1bc'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html" aria-label="Peranto">
+        <img class="brand-logo" src="logo-peranto.png" alt="Peranto" width="140" height="58" />
+      </a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menú</button>
+      <a class="wsis" href="https://www.itu.int/net4/wsis/forum/2023/Files/ocp/WF23OCPP5PRES-en.pdf" target="_blank" rel="noopener noreferrer">WSIS Forum Hackathon · UIT / ONU</a>
+      <nav class="links" id="menu">
+        <a href="#cigo">Credencial</a>
+        <a href="#productos">Productos</a>
+        <a href="#casos">Casos</a>
+        <a class="btn solid tiny" href="#postular">Piloto de 50 pases</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="cigo">
+      <div class="wrap">
+        <div class="hero-copy">
+          <a class="authority" href="https://www.itu.int/net4/wsis/forum/2023/Files/ocp/WF23OCPP5PRES-en.pdf" target="_blank" rel="noopener noreferrer">Reconocimiento internacional: hackathon WSIS Forum (UIT / Naciones Unidas)</a>
+          <h1>La credencial infalsificable en el celular de tu comunidad.</h1>
+          <p class="lead" style="margin-top:16px">Sustituye carnets de plástico y gafetes perdidos por una credencial que la persona lleva en su teléfono. El ciclo de validación en el puesto es de unos 10 segundos: lectura NFC o QR y comprobación de la firma en la laptop, con un lector USB de escritorio.</p>
+          <div class="actions">
+            <a class="btn solid" href="#postular">Postular a piloto pionero (50 pases)</a>
+            <a class="btn ghost" href="#postular">Solicitar videollamada de 10 min</a>
+          </div>
+          <p class="trust">Despliegue guiado con el fundador · Lector NFC estándar en la PC · El puesto es una laptop de la organización.</p>
+        </div>
+
+        <div class="sim stage" id="simulador">
+          <div class="sim-grid">
+            <article class="phone">
+              <p class="tag">Cartera en el teléfono</p>
+              <div class="handset">
+                <span class="notch" aria-hidden="true"></span>
+                <div class="screen">
+                  <video class="reel" poster="miniatura-telefono.webp" autoplay muted loop playsinline aria-label="Presentación de la credencial en la cartera de CiGo">
+                    <source src="presentacion.mp4" type="video/mp4" />
+                  </video>
+                </div>
+              </div>
+            </article>
+            <article class="desk">
+              <p class="tag">Puesto de control en la laptop</p>
+              <div class="window">
+                <div class="titlebar">
+                  <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span>CiGo Escritorio</span>
+                </div>
+                <div class="screen wide">
+                  <video class="reel wide" poster="miniatura-escritorio.webp" autoplay muted loop playsinline aria-label="El escritorio de CiGo leyendo la credencial en el puesto">
+                    <source src="puesto.mp4" type="video/mp4" />
+                  </video>
+                </div>
+              </div>
+            </article>
+          </div>
+          <p class="note">A la izquierda, la cartera en el teléfono. A la derecha, el puesto en la laptop: el código queda activo y la cámara coteja a quien presenta. La firma del reto es secp256k1.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="pioneros">
+      <div class="wrap cards">
+        <article class="card">
+          <p class="kicker">Convocatoria pioneros · 50 pases piloto</p>
+          <h2>Organizaciones pioneras para dejar el PVC.</h2>
+          <p>Piloto de 50 credenciales para universidades, residenciales y gremios. El fundador acompaña la configuración del escritorio y el plan se arma con el volumen real de la comunidad.</p>
+          <div class="pills">
+            <span>Universidades — identidad de alumnos</span>
+            <span>Condominios — control y asambleas</span>
+            <span>Colegios y gremios — padrón y quórum</span>
+          </div>
+        </article>
+        <article class="card">
+          <p class="kicker">Estándar criptográfico</p>
+          <h2>Identidad en el teléfono, código público.</h2>
+          <p>CiGo trabaja con credenciales que la persona guarda en su teléfono. El proyecto fue presentado en el hackathon del WSIS Forum de la UIT. Las claves de esa identidad no salen del teléfono.</p>
+          <div class="spec">
+            <div><span>Firma del reto</span><b>secp256k1</b></div>
+            <div><span>Huella del esquema</span><b>keccak256</b></div>
+            <div><span>Código</span><b>Público en GitHub</b></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="arquitectura">
+      <div class="wrap">
+        <p class="kicker">Arquitectura técnica</p>
+        <h2>Emisión y validación con la persona delante.</h2>
+        <p class="lead">CiGo no manda un archivo por correo para que circule. El administrador abre un reto en el escritorio y la persona lo firma desde su teléfono, por NFC o con el QR del puesto.</p>
+        <div class="steps">
+          <article class="card step">
+            <i>Paso 1</i>
+            <h3>Emisión con reto en presencia</h3>
+            <p>El administrador genera el reto en la app de escritorio. La persona presenta la wallet en su teléfono y firma ese reto.</p>
+            <ul>
+              <li>La credencial queda ligada a las claves de ese teléfono.</li>
+              <li>Quien administra no se lleva las claves de la persona.</li>
+            </ul>
+            <p class="meta">Protocolo de atestación · wallet en el teléfono</p>
+          </article>
+          <article class="card step">
+            <i>Paso 2</i>
+            <h3>Validación en el puesto (~10 segundos)</h3>
+            <p>La organización usa su laptop con el escritorio CiGo, un lector NFC comercial o la cámara para el QR.</p>
+            <ul>
+              <li>Acercamiento, lectura, comprobación de la firma en esa máquina y bitácora en pantalla.</li>
+              <li>La firma se comprueba en el puesto. La laptop es de la organización; no hay una renta de nube para ese cálculo.</li>
+            </ul>
+            <p class="meta">Hardware: laptop + lector USB</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="plastico">
+      <div class="wrap">
+        <p class="kicker">Análisis comparativo operacional</p>
+        <h2>Frente al carnet de plástico.</h2>
+        <p class="lead">El carnet de PVC se imprime, se pierde y se repone. CiGo emite en presencia y valida en el puesto.</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th></th><th>Carnet de PVC</th><th class="win">CiGo</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Emisión</td><td>Imprenta y reparto.</td><td class="win"><span class="tick">✓</span>Reto en el escritorio. La persona firma desde su teléfono.</td></tr>
+              <tr><td>Puerta</td><td>Tarjeta física o lista en papel.</td><td class="win"><span class="tick">✓</span>Laptop de la organización, lector NFC USB o cámara para el QR.</td></tr>
+              <tr><td>Extravío</td><td>Reimprimir y volver a entregar.</td><td class="win"><span class="tick">✓</span>Se revoca la credencial anterior y se emite otra en presencia.</td></tr>
+              <tr><td>Ciclo</td><td>Días de imprenta.</td><td class="win"><span class="tick">✓</span>Verificación en el puesto en unos 10 segundos.</td></tr>
+              <tr><td>Padrón</td><td>CSV o lista aparte.</td><td class="win"><span class="tick">✓</span>Cada credencial corresponde al teléfono que firmó el reto.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="calculadora">
+      <div class="wrap">
+        <p class="kicker">Estimación de impacto</p>
+        <h2>Huella de plástico y gasto de PVC que puedes dejar de repetir.</h2>
+        <p class="lead">Mueve los parámetros. El resultado es una estimación para decidir el piloto, no una cotización de imprenta.</p>
+        <div class="calc" data-calc>
+          <div class="figures">
+            <article class="figure">
+              <span class="muted">Gasto evitable en PVC a 3 años</span>
+              <b data-spend>$31,200</b>
+              <span class="muted">Impresión inicial y reposiciones estimadas.</span>
+            </article>
+            <article class="figure">
+              <span class="muted">Residuos de PVC</span>
+              <b data-kg>~3.25 kg</b>
+              <span class="muted">Tarjetas que no hace falta fabricar.</span>
+            </article>
+            <article class="figure good">
+              <span class="muted">Piloto pionero</span>
+              <b>50 credenciales</b>
+              <span class="muted">El plan de la escala completa se define con la organización.</span>
+              <a class="btn solid" href="#postular">Postular a 50 credenciales piloto</a>
+            </article>
+          </div>
+          <form class="card">
+            <label class="field">Personas en la organización
+              <output data-members>500</output>
+              <input type="range" name="members" min="50" max="3000" step="10" value="500" />
+            </label>
+            <label class="field">Costo estimado por carnet, cordón y porta (MXN)
+              <output data-cost>$48</output>
+              <input type="range" name="cost" min="20" max="150" step="1" value="48" />
+            </label>
+            <label class="field">Reposición anual por extravío o deterioro
+              <output data-rate>15%</output>
+              <input type="range" name="rate" min="5" max="40" step="1" value="15" />
+            </label>
+            <p class="note" data-formula></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="productos">
+      <div class="wrap">
+        <p class="kicker">En el mismo teléfono</p>
+        <h2>La credencial abre el resto.</h2>
+        <p class="lead">Boletos, voto, documentos y cosas no son sitios sueltos. Viven en la cartera de CiGo, atados a la misma identidad.</p>
+        <div class="suite">
+          <article class="card product">
+            <img src="media/app-presentar.jpg" alt="Pantalla Presentar de CiGo: credencial de elector y lectura NFC" />
+            <h3>Presentar</h3>
+            <p>La persona acerca el teléfono al lector, o muestra el código si el puesto no tiene NFC. La credencial de identidad sigue en la cartera.</p>
+          </article>
+          <article class="card product">
+            <img src="media/app-boletos.jpg" alt="Boleto en la cartera: ya entró y no se puede ceder" />
+            <h3>Boletos</h3>
+            <p>El pase se presenta, se cede una vez o vuelve a la taquilla. Cuando ya pasó la puerta, no se cede ni se devuelve. El precio es el de cara.</p>
+            <p class="meta"><a href="tickets.html">Cómo se lee en la puerta</a> · <a href="https://tickets.peranto.app">Cartelera</a></p>
+          </article>
+          <article class="card product">
+            <img src="media/app-voto.jpg" alt="Historial de voto en CiGo, con comprobante que no revela la opción" />
+            <h3>Voto</h3>
+            <p>La boleta pide una credencial vigente. El comprobante no dice la opción. Queda la transacción y el periodo.</p>
+          </article>
+          <article class="card product">
+            <img src="media/app-documentos.jpg" alt="Documento firmado con la credencial, activo en la cadena" />
+            <h3>Documentos</h3>
+            <p>La firma es la del sujeto de la credencial. La huella del archivo es la de la prueba, y el vínculo nombra esa credencial.</p>
+          </article>
+          <article class="card product">
+            <img src="media/app-cosa.jpg" alt="Pasaporte de un objeto en CiGo, con custodio e historial de entrega" />
+            <h3>Cosas</h3>
+            <p>Un objeto lleva pasaporte: qué es, quién lo custodia y cuándo se entregó. El historial cambia de manos sin un PDF suelto.</p>
+          </article>
+          <article class="card product">
+            <img src="media/app-qr.jpg" alt="Presentación de un boleto con código de un solo uso y cuenta regresiva" />
+            <h3>El código caduca</h3>
+            <p>La presentación del boleto dura unos segundos. Una captura del grupo llega tarde: al entrar, el boleto deja de poder cederse.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="casos">
+      <div class="wrap">
+        <p class="kicker">Dónde se usa</p>
+        <h2>La caseta, el aula, la asamblea y la fila.</h2>
+        <p class="lead">El puesto es la laptop de la organización y un lector USB, o la cámara. Estas escenas muestran el oficio, no un torniquete obligatorio.</p>
+        <div class="segments">
+          <article class="segment photo">
+            <img src="media/caso-campus.jpg" alt="Estudiante presenta el teléfono frente a una laptop y un lector en un escritorio" />
+            <div>
+              <p class="kicker">Universidad</p>
+              <h3>Biblioteca y laboratorio</h3>
+              <p>El estudiante presenta el teléfono. Quien atiende ve la confirmación en la laptop.</p>
+            </div>
+          </article>
+          <article class="segment photo">
+            <img src="media/caso-caseta.jpg" alt="Caseta de condominio con laptop, lector y el teléfono de quien entra" />
+            <div>
+              <p class="kicker">Condominio</p>
+              <h3>Repartidores sin dejar la INE</h3>
+              <p>Hoy el repartidor deja la INE en la caseta para entrar al condominio o al estacionamiento. Con CiGo presenta la credencial en su teléfono. El guardia la lee en la laptop. La identificación física no se queda en el escritorio.</p>
+            </div>
+          </article>
+          <article class="segment photo">
+            <img src="media/caso-asamblea.jpg" alt="Asamblea en una mesa, con el teléfono de quien vota" />
+            <div>
+              <p class="kicker">Gremio y asamblea</p>
+              <h3>El voto sale del teléfono</h3>
+              <p>La asamblea se abre a quien tiene la credencial vigente. El comprobante no publica la opción.</p>
+            </div>
+          </article>
+          <article class="segment photo">
+            <img src="media/caso-foro.jpg" alt="Fila de un foro, con el boleto presentado desde el teléfono" />
+            <div>
+              <p class="kicker">Foro</p>
+              <h3>La fila y el boleto</h3>
+              <p>En la puerta, la cámara de la laptop lee la presentación firmada. La misma captura, la segunda vez, ya no pasa.</p>
+              <p class="meta"><a href="tickets.html">La puerta, sin molinete</a></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="preguntas">
+      <div class="wrap">
+        <p class="kicker">Resolución de dudas técnicas</p>
+        <h2>Preguntas de directores y administradores.</h2>
+        <p class="lead">Emisión, hardware y qué hace la laptop del puesto.</p>
+        <details open>
+          <summary>¿Qué pasa si se cae el internet en la caseta?</summary>
+          <p>La firma del reto se comprueba en la laptop del puesto. Ese cálculo no consulta una base de datos en una nube de terceros. La vigencia que mira la ancla de revocación usa la red cuando el puesto la tiene.</p>
+        </details>
+        <details>
+          <summary>¿Cómo se emite sin que otra persona se quede el pase?</summary>
+          <p>El administrador abre el reto en el escritorio y la persona lo firma con su teléfono, por NFC o con el QR del registro. La credencial queda ligada a las claves de ese teléfono.</p>
+        </details>
+        <details>
+          <summary>¿Por qué la validación toma unos 10 segundos?</summary>
+          <p>El ciclo que medimos en operación incluye acercar el teléfono, la lectura NFC o el enfoque del QR, la comprobación de la firma en el escritorio y la línea que ve el guardia en la bitácora. Arriba se ve ese ciclo: la cartera en el teléfono y el puesto en la laptop.</p>
+        </details>
+        <details>
+          <summary>¿Qué equipo hace falta?</summary>
+          <p>Una computadora de la organización con el escritorio CiGo y un lector USB NFC, o la cámara para el QR. El puesto no pide un torniquete ni un servidor aparte.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="band" id="postular">
+      <div class="wrap close">
+        <form class="card" id="solicitud" data-form>
+          <p class="kicker">Programa de pilotos pioneros</p>
+          <h2>Postula tu institución a 50 credenciales.</h2>
+          <p class="lead">Deja los datos para coordinar la instalación del escritorio y la sesión de atestación.</p>
+          <label class="field">Nombre del responsable
+            <input name="name" required maxlength="120" placeholder="Ej. Lic. Carlos Méndez" autocomplete="name" />
+          </label>
+          <label class="field">Tipo de organización
+            <select name="kind" required>
+              <option>Universidad / escuela</option>
+              <option>Condominio / residencial</option>
+              <option>Caseta: repartidores y estacionamiento</option>
+              <option>Sindicato / colegio profesional</option>
+              <option>Cooperativa / comunidad</option>
+            </select>
+          </label>
+          <label class="field">Número estimado de miembros
+            <input name="size" required maxlength="20" placeholder="Ej. 350 personas" inputmode="numeric" />
+          </label>
+          <label class="field">Correo institucional
+            <input name="email" type="email" required maxlength="120" placeholder="carlos.mendez@tuorganizacion.edu.mx" autocomplete="email" />
+          </label>
+          <label class="field">Teléfono o WhatsApp
+            <input name="phone" required maxlength="30" placeholder="+52 55 1234 5678" autocomplete="tel" />
+          </label>
+          <fieldset class="via">
+            <legend>Enviar la postulación por</legend>
+            <label><input type="radio" name="via" value="wa" checked /> WhatsApp</label>
+            <label><input type="radio" name="via" value="mail" /> Correo</label>
+          </fieldset>
+          <div class="actions">
+            <button class="btn solid" type="submit" data-send>Abrir WhatsApp con la postulación</button>
+          </div>
+          <p class="note">Al enviar se abre WhatsApp o tu correo con estos datos. Esta página no los guarda en un servidor.</p>
+          <div class="ready" data-ready hidden>
+            <p data-status></p>
+            <p data-summary></p>
+            <button class="btn ghost" type="button" data-copy>Copiar postulación</button>
+          </div>
+        </form>
+        <aside class="card">
+          <p class="kicker">Contacto directo</p>
+          <h3>Edgar · fundador y arquitecto de CiGo</h3>
+          <p>Deja tus datos y coordinamos una videollamada de 10 minutos: emisión en presencia en tu teléfono y lectura en la laptop del puesto.</p>
+          <a class="btn solid" href="#solicitud">Solicitar videollamada de 10 min</a>
+          <p class="meta">WSIS Forum · UIT / ONU</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <div>
+        <h3>Peranto / CiGo</h3>
+        <p>Credencial, acceso y votación para una organización. El puesto corre en la laptop de quien opera la puerta.</p>
+        <p class="meta">WSIS Forum · UIT / ONU</p>
+      </div>
+      <div>
+        <h3>Infraestructura</h3>
+        <ul>
+          <li><a href="#cigo">Credencial</a></li>
+          <li><a href="#productos">Boletos, voto, documentos y cosas</a></li>
+          <li><a href="#casos">Casos, incluida la caseta</a></li>
+          <li><a href="#plastico">Frente al plástico</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Código y auditoría</h3>
+        <ul>
+          <li><a href="https://github.com/cryptohumano/peranto-protocol">Código en GitHub</a></li>
+          <li><a href="https://cigo.peranto.app/whitepaper.html">Apartado técnico</a></li>
+          <li><a href="https://cigo.peranto.app">Sitio de CiGo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contacto</h3>
+        <ul>
+          <li><a href="#postular">Programa piloto pionero</a></li>
+          <li><a href="#postular">Videollamada de 10 min</a></li>
+          <li><a href="mailto:outreach@peranto.app">outreach@peranto.app</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap legal">© 2026 Peranto / CiGo. <a href="https://cigo.peranto.app/whitepaper.html">Apartado técnico</a></div>
+  </footer>
+  <script src="site.js"></script>
+</body>
+</html>
