@@ -5,6 +5,27 @@
   const money = new Intl.NumberFormat("es-MX", { style: "currency", currency: "MXN", maximumFractionDigits: 0 });
   const num = new Intl.NumberFormat(en ? "en-US" : "es-MX");
 
+  const rotatingAudience = document.querySelector("[data-rotating-audience]");
+  if (rotatingAudience && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    try {
+      const phrases = JSON.parse(rotatingAudience.dataset.phrases || "[]");
+      let index = 0;
+      if (phrases.length > 1) {
+        window.setInterval(() => {
+          if (document.hidden) return;
+          rotatingAudience.classList.add("is-changing");
+          window.setTimeout(() => {
+            index = (index + 1) % phrases.length;
+            rotatingAudience.textContent = phrases[index];
+            rotatingAudience.classList.remove("is-changing");
+          }, 180);
+        }, 2800);
+      }
+    } catch {
+      // El primer texto del HTML permanece visible si la lista no es válida.
+    }
+  }
+
   document.querySelectorAll("a.lang").forEach((link) => {
     link.addEventListener("click", (event) => {
       if (!location.hash) return;
