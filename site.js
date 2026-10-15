@@ -30,6 +30,49 @@
     });
   }
 
+  document.querySelectorAll("[data-org]").forEach((link) => {
+    link.addEventListener("click", () => {
+      const select = document.querySelector('[name="kind"]');
+      const value = link.getAttribute("data-org");
+      if (select && value) select.value = value;
+    });
+  });
+
+  const audienceTabs = Array.from(document.querySelectorAll("[data-audience-tab]"));
+  const audiencePanels = Array.from(document.querySelectorAll("[data-audience-panel]"));
+  const selectAudience = (name, focus) => {
+    const activeTab = audienceTabs.find((tab) => tab.dataset.audienceTab === name);
+    const activePanel = audiencePanels.find((panel) => panel.dataset.audiencePanel === name);
+    if (!activeTab || !activePanel) return;
+    audienceTabs.forEach((tab) => {
+      const active = tab === activeTab;
+      tab.setAttribute("aria-selected", active ? "true" : "false");
+      tab.tabIndex = active ? 0 : -1;
+    });
+    audiencePanels.forEach((panel) => { panel.hidden = panel !== activePanel; });
+    if (focus) activeTab.focus();
+  };
+  audienceTabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => selectAudience(tab.dataset.audienceTab));
+    tab.addEventListener("keydown", (event) => {
+      if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+      event.preventDefault();
+      let next = index;
+      if (event.key === "ArrowLeft") next = (index - 1 + audienceTabs.length) % audienceTabs.length;
+      if (event.key === "ArrowRight") next = (index + 1) % audienceTabs.length;
+      if (event.key === "Home") next = 0;
+      if (event.key === "End") next = audienceTabs.length - 1;
+      selectAudience(audienceTabs[next].dataset.audienceTab, true);
+    });
+  });
+  document.querySelectorAll("[data-audience-link]").forEach((link) => {
+    link.addEventListener("click", () => selectAudience(link.dataset.audienceLink));
+  });
+  if (audienceTabs.length) {
+    const selected = audienceTabs.find((tab) => tab.getAttribute("aria-selected") === "true") || audienceTabs[0];
+    selectAudience(selected.dataset.audienceTab);
+  }
+
   document.querySelectorAll("[data-wa]").forEach((node) => {
     node.addEventListener("click", (event) => {
       event.preventDefault();
@@ -150,20 +193,22 @@
         "Application · CiGo pioneer pilot",
         "Lead: " + name,
         "Organization: " + String(data.get("kind")),
-        "Members: " + String(data.get("size")).trim(),
+        "Total organization size: " + String(data.get("size")).trim(),
+        "Pilot participants: " + String(data.get("pilotSize")).trim(),
         "Email: " + String(data.get("email")).trim(),
         "Phone: " + String(data.get("phone")).trim(),
-        "Pilot: 50 credentials",
-        "I want the 10-minute call.",
+        "Pilot: three months",
+        "I want the 20-minute demo.",
       ] : [
         "Postulación · Piloto pionero CiGo",
         "Responsable: " + name,
         "Organización: " + String(data.get("kind")),
-        "Miembros: " + String(data.get("size")).trim(),
+        "Tamaño total de la organización: " + String(data.get("size")).trim(),
+        "Participantes en el piloto: " + String(data.get("pilotSize")).trim(),
         "Correo: " + String(data.get("email")).trim(),
         "Teléfono: " + String(data.get("phone")).trim(),
-        "Piloto: 50 credenciales",
-        "Quiero la videollamada de 10 minutos.",
+        "Piloto: tres meses",
+        "Quiero la demostración de 20 minutos.",
       ]).join("\n");
       summary.textContent = text;
       ready.hidden = false;

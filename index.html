@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CiGo · Credencial digital y control de acceso para comunidades</title>
-  <meta name="description" content="Credencial digital en el celular para condominios, universidades y gremios. La caseta lleva la bitácora. En la misma cartera: boletos, votación, documentos firmados y pasaporte de cosas. Piloto de 50 pases." />
+  <title>CiGo · Credencial digital, acceso y votación para comunidades</title>
+  <meta name="description" content="Credenciales digitales, control de acceso y votaciones internas para organizaciones. Piloto acompañado de tres meses, sin costo monetario de implementación para hasta 50 participantes." />
   <link rel="canonical" href="https://pioneros.peranto.app/" />
   <link rel="alternate" hreflang="es" href="https://pioneros.peranto.app/" />
   <link rel="alternate" hreflang="en" href="https://pioneros.peranto.app/en/" />
@@ -13,8 +13,8 @@
   <meta property="og:locale" content="es_MX" />
   <meta property="og:site_name" content="CiGo pioneros" />
   <meta property="og:url" content="https://pioneros.peranto.app/" />
-  <meta property="og:title" content="CiGo · Credencial digital y control de acceso para comunidades" />
-  <meta property="og:description" content="Credencial en el celular, bitácora de la caseta, boletos, votación, documentos firmados y pasaporte de cosas. El puesto revisa el registro anclado. Piloto de 50 pases." />
+  <meta property="og:title" content="CiGo · Credencial digital, acceso y votación para comunidades" />
+  <meta property="og:description" content="Acredita personas, controla accesos y organiza votaciones internas. Piloto acompañado de tres meses, sin costo monetario de implementación para hasta 50 participantes." />
   <meta property="og:image" content="https://pioneros.peranto.app/media/caso-caseta.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <script type="application/ld+json">
@@ -32,7 +32,7 @@
         "name": "CiGo pioneros",
         "url": "https://pioneros.peranto.app/",
         "inLanguage": "es-MX",
-        "description": "Credencial digital, control de acceso y bitácora para condominios, universidades y gremios."
+        "description": "Credencial digital, control de acceso y votación para condominios, universidades y sindicatos."
       },
       {
         "@type": "Person",
@@ -86,10 +86,26 @@
           },
           {
             "@type": "Question",
-            "name": "¿CiGo reemplaza una compraventa o una carta poder?",
+            "name": "¿Qué puede hacer un sindicato con CiGo?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No. La compraventa y la carta poder siguen siendo actos civiles, y muchos todavía se hacen en papel. Documentos y el pasaporte de la cosa buscan atribuir el archivo y la firma electrónica a la persona que los creó, para la vida civil y mercantil de ciudadanía, empresas e instituciones. El Código Nacional de Procedimientos Civiles y Familiares reconoce como prueba la información en una cadena de bloques, artículos 348 y 350. CiGo no sustituye el acto ni le pone valor en el juicio."
+              "text": "Emitir credenciales digitales para sus agremiados y organizar votaciones internas. Las convocatorias disponibles se consultan y votan en la aplicación; las notificaciones push están en integración. Al cerrar, se exportan el conteo y la trazabilidad en CSV. La persona responsable incorpora manualmente ese archivo al módulo Documentos y lo firma con la credencial verificable definida para el proceso, incluida una que acredite posesión de FIEL o FIREL."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿El piloto tiene costo?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "El piloto dura tres meses y no tiene costo monetario de implementación para hasta 50 participantes. La institución aporta sus equipos, teléfonos, hardware, capacitación interna y una carta convenio con los alcances para mencionar su participación. Por encima de 50 participantes, el alcance y costo se revisan con la organización."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿El recibo de voto revela la opción?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. El recibo acredita la participación y no dice la opción marcada. En votaciones privadas, la opción se cifra; el contrato y la gestión de las pruebas de conocimiento cero continúan en desarrollo durante el piloto."
             }
           }
         ]
@@ -111,13 +127,13 @@
         <img class="brand-logo" src="logo-peranto.png" alt="Peranto" width="140" height="58" />
       </a>
       <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menú</button>
-      <a class="wsis" href="https://www.itu.int/net4/wsis/forum/2023/Files/ocp/WF23OCPP5PRES-en.pdf" target="_blank" rel="noopener noreferrer">WSIS Forum Hackathon · UIT / ONU</a>
       <nav class="links" id="menu">
-        <a href="#cigo">Credencial</a>
-        <a href="#productos">Productos</a>
-        <a href="#casos">Casos</a>
-        <a href="#descarga">Descargar</a>
-        <a class="btn solid tiny" href="#postular">Piloto de 50 pases</a>
+        <a href="#soluciones">Soluciones</a>
+        <a href="#pioneros">Piloto</a>
+        <a href="#datos">Confianza</a>
+        <a href="#preguntas">Preguntas</a>
+        <a href="#descarga">Ya participo</a>
+        <a class="btn solid tiny" href="https://calendly.com/edoga-salinas/one-click-kyc" target="_blank" rel="noopener noreferrer">Ver demostración</a>
       </nav>
       <a class="lang" href="en/" hreflang="en" lang="en">EN</a>
     </div>
@@ -127,311 +143,192 @@
     <section class="hero" id="cigo">
       <div class="wrap">
         <div class="hero-copy">
-          <a class="authority" href="https://www.itu.int/net4/wsis/forum/2023/Files/ocp/WF23OCPP5PRES-en.pdf" target="_blank" rel="noopener noreferrer">Reconocimiento internacional: hackathon WSIS Forum (UIT / Naciones Unidas)</a>
-          <h1>La credencial infalsificable en el celular de tu comunidad.</h1>
-          <p class="lead" style="margin-top:16px">Sustituye carnets de plástico y gafetes perdidos por una credencial digital en el teléfono. En la caseta, el control de acceso revisa el registro y deja la bitácora: quién entró, quién sigue adentro y cuánto tiempo estuvo. El ciclo en el puesto es de unos 10 segundos, con lector NFC o la cámara de la laptop.</p>
+          <a class="authority" href="https://www.itu.int/net4/wsis/forum/2023/Files/ocp/WF23OCPP5PRES-en.pdf" target="_blank" rel="noopener noreferrer">Proyecto reconocido en WSIS Forum Hackathon 2023 · ver presentación</a>
+          <h1>Una credencial para acreditar, decidir y firmar en tu organización.</h1>
+          <p class="lead" style="margin-top:16px">Emite credenciales digitales verificables, controla accesos u organiza votaciones internas desde una misma aplicación. Elige el proceso que necesita tu institución y pruébalo con acompañamiento durante tres meses.</p>
           <div class="actions">
-            <a class="btn solid" href="#postular">Postular a piloto pionero (50 pases)</a>
-            <a class="btn ghost" href="https://calendly.com/edoga-salinas/one-click-kyc" target="_blank" rel="noopener noreferrer">Agendar videollamada de 10 min</a>
+            <a class="btn solid" href="https://calendly.com/edoga-salinas/one-click-kyc" target="_blank" rel="noopener noreferrer">Ver demostración de 20 min</a>
+            <a class="btn ghost" href="#pioneros">Conocer el piloto</a>
           </div>
-          <p class="trust">Despliegue guiado con el fundador · Lector NFC estándar en la PC · El puesto es una laptop de la organización.</p>
-        </div>
-
-        <div class="sim stage" id="simulador">
-          <div class="sim-grid">
-            <article class="phone">
-              <p class="tag">Cartera en el teléfono</p>
-              <div class="handset">
-                <span class="notch" aria-hidden="true"></span>
-                <div class="screen">
-                  <video class="reel" poster="miniatura-telefono.webp" autoplay muted loop playsinline aria-label="Presentación de la credencial en la cartera de CiGo">
-                    <source src="presentacion.mp4" type="video/mp4" />
-                  </video>
-                </div>
-              </div>
-            </article>
-            <article class="desk">
-              <p class="tag">Puesto de control en la laptop</p>
-              <div class="window">
-                <div class="titlebar">
-                  <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
-                  <span>CiGo Escritorio</span>
-                </div>
-                <div class="screen wide">
-                  <video class="reel wide" poster="miniatura-escritorio.webp" autoplay muted loop playsinline aria-label="El escritorio de CiGo leyendo la credencial en el puesto">
-                    <source src="puesto.mp4" type="video/mp4" />
-                  </video>
-                </div>
-              </div>
-            </article>
-          </div>
-          <p class="note">A la izquierda, la cartera en el teléfono. A la derecha, el puesto en la laptop: quien presenta queda en la bitácora, con la hora y el resultado.</p>
+          <p class="trust">Sin costo monetario de implementación para hasta 50 participantes · Despliegue y capacitación guiados · La institución conserva sus equipos y sus datos.</p>
         </div>
       </div>
     </section>
 
-    <section class="night-band" id="descarga">
+    <section id="soluciones">
       <div class="wrap">
-        <p class="kicker">Piloto</p>
-        <h2>CiGo en el teléfono y Aura en el navegador.</h2>
-        <p class="lead">La misma identidad. CiGo se instala en Android desde aquí. Aura, en la computadora, desde Chrome.</p>
-        <div class="cards">
-          <article class="card">
-            <p class="kicker">Android · 0.1.120</p>
-            <h3>CiGo para el teléfono</h3>
-            <p>Android 8 o más nuevo. No hace falta modo desarrollador. Al abrir el archivo, el teléfono pide permitir la instalación desde Chrome, una sola vez.</p>
-            <div class="actions">
-              <a class="btn solid" href="downloads/aura-wallet.apk">Descargar CiGo</a>
-            </div>
-            <p class="note">Si Chrome avisa que el archivo puede ser peligroso, elige Descargar de todas formas. Luego abre el archivo, permite instalar desde Chrome y confirma. Anota la frase de recuperación: si desinstalas, es la única forma de volver a entrar.</p>
-          </article>
-          <article class="card">
-            <p class="kicker">Chrome · 0.2.0</p>
-            <h3>Aura para el navegador</h3>
-            <p>La extensión firma desde el escritorio de CiGo. Usa la misma frase de recuperación que la app del teléfono.</p>
-            <div class="actions">
-              <a class="btn solid" href="https://chromewebstore.google.com/detail/aura-wallet/jgjhbhonfpoalhlbnmgffdcpjfdggbhd?hl=es" target="_blank" rel="noopener noreferrer">Instalar en Chrome</a>
-            </div>
-            <p class="note">Abre Chrome en la computadora, pulsa el botón y confirma Añadir a Chrome.</p>
-          </article>
+        <p class="kicker">Elige tu contexto</p>
+        <h2>Una infraestructura; distintos procesos.</h2>
+        <p class="lead">Selecciona una audiencia para ver qué puede probar durante el piloto. Todos los módulos están disponibles; el acompañamiento y la medición se concentran en uno o dos procesos principales.</p>
+        <div class="audience-tabs" role="tablist" aria-label="Tipo de organización">
+          <button type="button" role="tab" id="tab-sindicato" aria-controls="panel-sindicato" aria-selected="true" data-audience-tab="sindicato">Sindicato o gremio</button>
+          <button type="button" role="tab" id="tab-universidad" aria-controls="panel-universidad" aria-selected="false" data-audience-tab="universidad">Universidad</button>
+          <button type="button" role="tab" id="tab-condominio" aria-controls="panel-condominio" aria-selected="false" data-audience-tab="condominio">Condominio</button>
+          <button type="button" role="tab" id="tab-eventos" aria-controls="panel-eventos" aria-selected="false" data-audience-tab="eventos">Eventos</button>
         </div>
+        <div class="audience-panel" id="panel-sindicato" role="tabpanel" aria-labelledby="tab-sindicato" data-audience-panel="sindicato">
+          <div>
+            <p class="kicker">Sindicato o gremio</p>
+            <h3>Credencializar, convocar y documentar decisiones.</h3>
+            <p>La dirigencia emite credenciales verificables, abre una votación para miembros vigentes y exporta su cierre. Las notificaciones push y el modo privado con ZKP continúan en integración durante el piloto.</p>
+          </div>
+          <ul class="outcomes">
+            <li>Credencial digital de miembro</li>
+            <li>Votación interna y recibo sin opción marcada</li>
+            <li>CSV de cierre para firmar manualmente en Documentos</li>
+          </ul>
+        </div>
+        <div class="audience-panel" id="panel-universidad" role="tabpanel" aria-labelledby="tab-universidad" data-audience-panel="universidad" hidden>
+          <div>
+            <p class="kicker">Universidad o escuela</p>
+            <h3>Identidad institucional y espacios con acceso verificable.</h3>
+            <p>La institución emite credenciales a su comunidad y define los procesos que quiere operar: biblioteca, laboratorio, actividades o consultas internas.</p>
+          </div>
+          <ul class="outcomes">
+            <li>Credencial verificable para alumnos o personal</li>
+            <li>Registro de entrada y salida por puesto</li>
+            <li>Consultas internas ligadas a una credencial vigente</li>
+          </ul>
+        </div>
+        <div class="audience-panel" id="panel-condominio" role="tabpanel" aria-labelledby="tab-condominio" data-audience-panel="condominio" hidden>
+          <div>
+            <p class="kicker">Condominio o residencial</p>
+            <h3>Accesos y participación sin retener identificaciones.</h3>
+            <p>La caseta verifica presentaciones desde el teléfono y conserva una bitácora local. La comunidad puede probar además una consulta o asamblea interna.</p>
+          </div>
+          <ul class="outcomes">
+            <li>Credenciales para residentes o visitantes</li>
+            <li>Bitácora de entradas, salidas y permanencia</li>
+            <li>Consulta interna para credenciales vigentes</li>
+          </ul>
+        </div>
+        <div class="audience-panel" id="panel-eventos" role="tabpanel" aria-labelledby="tab-eventos" data-audience-panel="eventos" hidden>
+          <div>
+            <p class="kicker">Organización de eventos</p>
+            <h3>Boletos, acceso y reglas de negocio en una red de pruebas.</h3>
+            <p>El piloto permite ensayar creación de eventos, emisión, acceso, cancelaciones, reembolsos y dispersión sin mover dinero real.</p>
+          </div>
+          <ul class="outcomes">
+            <li>Boletos firmados y presentación de un solo uso</li>
+            <li>Conteo de invitados y control de acceso</li>
+            <li>Cobros y dispersión simulados con token de prueba</li>
+          </ul>
+        </div>
+        <div class="actions">
+          <a class="btn solid" href="https://calendly.com/edoga-salinas/one-click-kyc" target="_blank" rel="noopener noreferrer">Ver el flujo en una demostración</a>
+          <a class="btn ghost" href="#pioneros">Revisar alcance del piloto</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="evidencia">
+      <div class="wrap">
+        <p class="kicker">Operación actual</p>
+        <h2>Lo que ya se puede mostrar.</h2>
+        <p class="lead">La demostración recorre emisión y verificación de credenciales, presentación en el puesto, votación visible, recibo y exportación del cierre.</p>
+        <div class="evidence-grid">
+          <article class="card evidence-copy">
+            <h3>Voto desde la aplicación</h3>
+            <p>La pantalla conserva periodo, transacción y recibo sin publicar la opción marcada. El modo privado sigue marcado como experimental durante el piloto.</p>
+            <div class="pills">
+              <span>Credencial vigente</span>
+              <span>Firma desde el teléfono</span>
+              <span>Recibo verificable</span>
+            </div>
+          </article>
+          <figure class="app-proof">
+            <img src="media/app-voto.jpg" alt="Historial de votación en CiGo con periodo, transacción y comprobante sin opción marcada" loading="lazy" />
+          </figure>
+        </div>
+        <details class="demo-details">
+          <summary>Ver credencial y escritorio en operación</summary>
+          <div class="sim" id="simulador">
+            <div class="sim-grid">
+              <article class="phone">
+                <p class="tag">Cartera en el teléfono</p>
+                <div class="handset">
+                  <span class="notch" aria-hidden="true"></span>
+                  <div class="screen">
+                    <video class="reel" poster="miniatura-telefono.webp" controls muted playsinline preload="metadata" aria-label="Presentación de la credencial en la cartera de CiGo">
+                      <source src="presentacion.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                </div>
+              </article>
+              <article class="desk">
+                <p class="tag">Puesto de control en la laptop</p>
+                <div class="window">
+                  <div class="titlebar">
+                    <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                    <span>CiGo Escritorio</span>
+                  </div>
+                  <div class="screen wide">
+                    <video class="reel wide" poster="miniatura-escritorio.webp" controls muted playsinline preload="metadata" aria-label="El escritorio de CiGo leyendo la credencial en el puesto">
+                      <source src="puesto.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <p class="note">La cartera presenta desde el teléfono y el escritorio verifica en la computadora de la organización.</p>
+          </div>
+        </details>
       </div>
     </section>
 
     <section class="night-band" id="pioneros">
       <div class="wrap cards">
         <article class="card">
-          <p class="kicker">Convocatoria pioneros · 50 pases piloto</p>
-          <h2>Organizaciones pioneras para dejar el PVC.</h2>
-          <p>Piloto de 50 credenciales para universidades, residenciales y gremios. El fundador acompaña la configuración del escritorio y el plan se arma con el volumen real de la comunidad.</p>
+          <p class="kicker">Convocatoria pioneros · 12 semanas</p>
+          <h2>Un proceso real, no solo una demostración.</h2>
+          <p>La institución puede usar todos los módulos disponibles y elige uno o dos procesos principales para medir el piloto: credencialización, votación, accesos o boletaje. No hay costo monetario de implementación para hasta 50 participantes; por encima de ese número se acuerdan alcance y costo.</p>
           <div class="pills">
-            <span>Universidades — identidad de alumnos</span>
-            <span>Condominios — control y asambleas</span>
-            <span>Colegios y gremios — padrón y quórum</span>
+            <span>Semanas 1–2 — convenio e instalación</span>
+            <span>Semanas 3–6 — capacitación y credenciales</span>
+            <span>Semanas 7–10 — operación real</span>
+            <span>Semanas 11–12 — evaluación y cierre</span>
           </div>
+          <p class="meta"><a href="#soluciones" data-audience-link="sindicato">Ver el flujo para sindicatos</a></p>
         </article>
         <article class="card">
-          <p class="kicker">Escritorio · Accesos</p>
-          <h2>El puesto sabe quién sigue adentro.</h2>
-          <p>Quien opera la puerta ve las entradas del día, las salidas y la visita abierta: nombre, credencial y desde qué hora. El libro se busca y se baja en CSV.</p>
-          <p class="meta"><a href="#accesos">Ver la bitácora</a></p>
+          <p class="kicker">Responsabilidades</p>
+          <h2>Peranto acompaña; la institución opera.</h2>
+          <p>La institución aporta a sus participantes, sus computadoras y teléfonos, el hardware necesario y el tiempo de capacitación. Peranto configura, capacita, apoya el uso, corrige errores y evalúa hardware adicional. Las funciones nuevas que resuelvan necesidades comunes pueden integrarse al producto general.</p>
+          <p class="meta">Referencia del prototipo: lector NFC ACR122U · Otros lectores se evalúan durante el piloto.</p>
         </article>
       </div>
     </section>
 
-    <section class="night-band" id="accesos">
+    <section class="night-band" id="piloto">
       <div class="wrap">
-        <p class="kicker">Bitácora del puesto</p>
-        <h2>Certeza de quién está adentro.</h2>
-        <p class="lead">Cada presentación queda en Accesos. El escritorio cuenta el día, separa entradas y salidas, y deja la visita abierta a la vista de quien opera la puerta.</p>
-        <figure class="shot">
-          <img src="media/escritorio-accesos.png" alt="Accesos en CiGo Escritorio: conteo del día, quién sigue adentro y visitas cerradas con su duración" />
-        </figure>
+        <p class="kicker">Criterios de éxito</p>
+        <h2>El piloto termina con un proceso operado por la institución.</h2>
+        <p class="lead">Al inicio se acuerdan el número de participantes y uno o dos procesos principales. El éxito no se mide por descargar una aplicación, sino por completar el flujo con las personas responsables.</p>
         <div class="facts">
           <article class="card">
-            <h3>Adentro ahora</h3>
-            <p>Nombre, credencial y desde qué hora. Cuando la persona sale, el guardia registra la salida en esa misma línea.</p>
+            <h3>Credenciales</h3>
+            <p>Participantes acordados credencializados; administradores capaces de emitir, verificar y revocar; usuarios capaces de presentar su credencial.</p>
           </article>
           <article class="card">
-            <h3>Cuánto tiempo estuvo</h3>
-            <p>Las visitas cerradas del día dicen la duración, en minutos o en menos de un minuto. Arriba quedan contadas las entradas y las salidas.</p>
+            <h3>Votación o accesos</h3>
+            <p>Una convocatoria o jornada real abierta, operada, cerrada y documentada; o una bitácora de accesos utilizada correctamente por el puesto.</p>
           </article>
           <article class="card">
-            <h3>Qué presentó y a dónde iba</h3>
-            <p>El libro anota la credencial, si pasó, la vía y quién atestó. Si el puesto lo captura, también el destino y el lugar.</p>
+            <h3>Boletaje</h3>
+            <p>Eventos, cobros y dispersión de prueba, accesos, conteo, cancelaciones, reembolsos y reglas de negocio ejecutados sin mover dinero real.</p>
           </article>
         </div>
-        <p class="note">Un día por tabla. La hora es la de la Ciudad de México. El libro queda en ese navegador y solo para la cartera que inició sesión. Se busca por nombre o credencial y se descarga en CSV.</p>
-      </div>
-    </section>
-
-    <section id="arquitectura">
-      <div class="wrap">
-        <p class="kicker">En el puesto</p>
-        <h2>Emisión y validación con la persona delante.</h2>
-        <p class="lead">CiGo no manda un archivo por correo para que circule. El administrador abre un reto en el escritorio y la persona lo firma desde su teléfono, por NFC o con el QR del puesto.</p>
-        <div class="steps">
-          <article class="card step">
-            <i>Paso 1</i>
-            <h3>Emisión con reto en presencia</h3>
-            <p>El administrador genera el reto en la app de escritorio. La persona presenta la wallet en su teléfono y firma ese reto.</p>
-            <ul>
-              <li>La credencial queda ligada a las claves de ese teléfono.</li>
-              <li>Quien administra no se lleva las claves de la persona.</li>
-            </ul>
-            <p class="meta">Protocolo de atestación · wallet en el teléfono</p>
+        <p class="note">Los incidentes se documentan. Peranto corrige errores y las necesidades generales viables se incorporan a la hoja de ruta común. Durante el piloto se liberan versiones estables de prueba de contratos, aplicación, escritorios y Aura.</p>
+        <div class="cards">
+          <article class="card">
+            <p class="kicker">Al concluir</p>
+            <h3>Cerrar o continuar</h3>
+            <p>La institución puede dar por terminado el piloto, conservar sus documentos y evaluar una nueva etapa. La salida y el uso posterior del nombre institucional quedan sujetos al convenio.</p>
           </article>
-          <article class="card step">
-            <i>Paso 2</i>
-            <h3>Validación en el puesto (~10 segundos)</h3>
-            <p>La organización usa su laptop con el escritorio CiGo, un lector NFC comercial o la cámara para el QR.</p>
-            <ul>
-              <li>Acercamiento, lectura y la línea que queda en Accesos: hora, resultado y credencial.</li>
-              <li>La confirmación corre en la laptop de la organización.</li>
-            </ul>
-            <p class="meta">Hardware: laptop + lector USB</p>
-          </article>
-        </div>
-        <p class="note">La firma del reto es secp256k1. La bóveda del teléfono y el voto homomórfico están en el <a href="https://cigo.peranto.app/whitepaper.html#criptografia">apartado técnico</a>.</p>
-      </div>
-    </section>
-
-    <section id="plastico">
-      <div class="wrap">
-        <p class="kicker">Análisis comparativo operacional</p>
-        <h2>Frente al carnet de plástico.</h2>
-        <p class="lead">El carnet de PVC se imprime, se pierde y se repone. CiGo emite en presencia y valida en el puesto.</p>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr><th></th><th>Carnet de PVC</th><th class="win">CiGo</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Emisión</td><td>Imprenta y reparto.</td><td class="win"><span class="tick">✓</span>Reto en el escritorio. La persona firma desde su teléfono.</td></tr>
-              <tr><td>Puerta</td><td>Tarjeta física o lista en papel.</td><td class="win"><span class="tick">✓</span>Laptop de la organización, lector NFC USB o cámara para el QR.</td></tr>
-              <tr><td>Extravío</td><td>Reimprimir y volver a entregar.</td><td class="win"><span class="tick">✓</span>Se revoca la credencial anterior y se emite otra en presencia.</td></tr>
-              <tr><td>Ciclo</td><td>Días de imprenta.</td><td class="win"><span class="tick">✓</span>Verificación en el puesto en unos 10 segundos.</td></tr>
-              <tr><td>Padrón</td><td>CSV o lista aparte.</td><td class="win"><span class="tick">✓</span>Cada credencial corresponde al teléfono que firmó el reto.</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <section id="calculadora">
-      <div class="wrap">
-        <p class="kicker">Estimación de impacto</p>
-        <h2>Huella de plástico y gasto de PVC que puedes dejar de repetir.</h2>
-        <p class="lead">Mueve los parámetros. El resultado es una estimación para decidir el piloto, no una cotización de imprenta.</p>
-        <div class="calc" data-calc>
-          <div class="figures">
-            <article class="figure">
-              <span class="muted">Gasto evitable en PVC a 3 años</span>
-              <b data-spend>$31,200</b>
-              <span class="muted">Impresión inicial y reposiciones estimadas.</span>
-            </article>
-            <article class="figure">
-              <span class="muted">Residuos de PVC</span>
-              <b data-kg>~3.25 kg</b>
-              <span class="muted">Tarjetas que no hace falta fabricar.</span>
-            </article>
-            <article class="figure good">
-              <span class="muted">Piloto pionero</span>
-              <b>50 credenciales</b>
-              <span class="muted">El plan de la escala completa se define con la organización.</span>
-              <a class="btn solid" href="#postular">Postular a 50 credenciales piloto</a>
-            </article>
-          </div>
-          <form class="card">
-            <label class="field">Personas en la organización
-              <output data-members>500</output>
-              <span class="stepper">
-                <button type="button" data-step="-1" aria-label="Menos personas">−</button>
-                <input type="range" name="members" min="50" max="3000" step="10" value="500" />
-                <button type="button" data-step="1" aria-label="Más personas">+</button>
-              </span>
-            </label>
-            <label class="field">Costo estimado por carnet, cordón y porta (MXN)
-              <output data-cost>$48</output>
-              <span class="stepper">
-                <button type="button" data-step="-1" aria-label="Bajar el costo">−</button>
-                <input type="range" name="cost" min="20" max="150" step="1" value="48" />
-                <button type="button" data-step="1" aria-label="Subir el costo">+</button>
-              </span>
-            </label>
-            <label class="field">Reposición anual por extravío o deterioro
-              <output data-rate>15%</output>
-              <span class="stepper">
-                <button type="button" data-step="-1" aria-label="Bajar la reposición">−</button>
-                <input type="range" name="rate" min="5" max="40" step="1" value="15" />
-                <button type="button" data-step="1" aria-label="Subir la reposición">+</button>
-              </span>
-            </label>
-            <p class="note" data-formula></p>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <section class="night-band" id="productos">
-      <div class="wrap">
-        <p class="kicker">En el mismo teléfono</p>
-        <h2>La credencial abre el resto.</h2>
-        <p class="lead">Boletos, voto, documentos y cosas no son sitios sueltos. Viven en la cartera de CiGo, atados a la misma identidad.</p>
-        <div class="suite">
-          <article class="card product">
-            <img src="media/app-presentar.jpg" alt="Pantalla Presentar de CiGo: credencial de elector y lectura NFC" />
-            <h3>Presentar</h3>
-            <p>La persona acerca el teléfono al lector, o muestra el código si el puesto no tiene NFC. La credencial de identidad sigue en la cartera.</p>
-          </article>
-          <article class="card product">
-            <img src="media/app-boletos.jpg" alt="Boleto en la cartera: ya entró y no se puede ceder" />
-            <h3>Boletos</h3>
-            <p>El pase se presenta, se cede una vez o vuelve a la taquilla. Cuando ya pasó la puerta, no se cede ni se devuelve. El precio es el de cara.</p>
-            <p class="meta"><a href="tickets.html">Cómo se lee en la puerta</a> · <a href="https://tickets.peranto.app">Cartelera</a></p>
-          </article>
-          <article class="card product">
-            <img src="media/app-voto.jpg" alt="Historial de voto en CiGo, con comprobante que no revela la opción" />
-            <h3>Voto</h3>
-            <p>La boleta pide una credencial vigente. El comprobante no dice la opción. Queda la transacción y el periodo.</p>
-          </article>
-          <article class="card product">
-            <img src="media/app-documentos.jpg" alt="Documento firmado con la credencial, activo en la cadena" />
-            <h3>Documentos</h3>
-            <p>La firma es la del sujeto de la credencial. La huella del archivo es la de la prueba, y el vínculo nombra esa credencial.</p>
-          </article>
-          <article class="card product">
-            <img src="media/app-cosa.jpg" alt="Pasaporte de un objeto en CiGo, con custodio e historial de entrega" />
-            <h3>Cosas</h3>
-            <p>Un objeto lleva pasaporte: qué es, quién lo custodia y cuándo se entregó. El historial cambia de manos sin un PDF suelto.</p>
-          </article>
-          <article class="card product">
-            <img src="media/app-qr.jpg" alt="Presentación de un boleto con código de un solo uso y cuenta regresiva" />
-            <h3>El código caduca</h3>
-            <p>La presentación del boleto dura unos segundos. Una captura del grupo llega tarde: al entrar, el boleto deja de poder cederse.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="casos">
-      <div class="wrap">
-        <p class="kicker">Dónde se usa</p>
-        <h2>La caseta, el aula, la asamblea y la fila.</h2>
-        <p class="lead">El puesto es la laptop de la organización y un lector USB, o la cámara. Estas escenas muestran el oficio, no un torniquete obligatorio.</p>
-        <div class="segments">
-          <article class="segment photo">
-            <img src="media/caso-campus.jpg" alt="Estudiante presenta el teléfono frente a una laptop y un lector en un escritorio" />
-            <div>
-              <p class="kicker">Universidad</p>
-              <h3>Biblioteca y laboratorio</h3>
-              <p>El estudiante presenta el teléfono. Quien atiende ve la confirmación en la laptop.</p>
-            </div>
-          </article>
-          <article class="segment photo">
-            <img src="media/caso-caseta.jpg" alt="Caseta de condominio con laptop, lector y el teléfono de quien entra" />
-            <div>
-              <p class="kicker">Condominio</p>
-              <h3>Repartidores sin dejar la INE</h3>
-              <p>Hoy el repartidor deja la INE en la caseta para entrar al condominio o al estacionamiento. Con CiGo presenta la credencial en su teléfono. El guardia la lee en la laptop. La identificación física no se queda en el escritorio.</p>
-            </div>
-          </article>
-          <article class="segment photo">
-            <img src="media/caso-asamblea.jpg" alt="Asamblea en una mesa, con el teléfono de quien vota" />
-            <div>
-              <p class="kicker">Gremio y asamblea</p>
-              <h3>El voto sale del teléfono</h3>
-              <p>La asamblea se abre a quien tiene la credencial vigente. El comprobante no publica la opción.</p>
-            </div>
-          </article>
-          <article class="segment photo">
-            <img src="media/caso-foro.jpg" alt="Fila de un foro, con el boleto presentado desde el teléfono" />
-            <div>
-              <p class="kicker">Foro</p>
-              <h3>La fila y el boleto</h3>
-              <p>En la puerta, la cámara de la laptop lee la presentación firmada. La misma captura, la segunda vez, ya no pasa.</p>
-              <p class="meta"><a href="tickets.html">La puerta, sin molinete</a></p>
-            </div>
+          <article class="card">
+            <p class="kicker">Continuidad opcional</p>
+            <h3>Desde $1,500 MXN mensuales por 12 meses</h3>
+            <p>Incluye soporte operativo y corrección de errores. Hardware, comisiones de red y desarrollos exclusivos no están incluidos. Las mejoras generales pueden incorporarse al producto común; las personalizaciones se cotizan aparte.</p>
           </article>
         </div>
       </div>
@@ -439,25 +336,42 @@
 
     <section id="datos">
       <div class="wrap">
-        <p class="kicker">Autogestión</p>
-        <h2>La persona es dueña del dato que firma.</h2>
-        <p class="lead">Una compraventa, una carta poder o la entrega de un objeto siguen en papel porque el archivo, solo, no dice quién lo hizo. Documentos y el pasaporte de la cosa buscan dar esa atribución: la firma electrónica sale de la cartera y se puede vincular con la persona, sin que nadie más se quede las claves.</p>
-        <p>Esa es la hipótesis. Un marco técnico para la vida civil y mercantil de la ciudadanía, las empresas y las instituciones, desde la descentralización y la autogestión de quien firma. No reemplaza el acto ni el juicio. Es una aproximación que, bien aplicada, puede ayudar a respetar y a hacer valer las garantías de esa persona. El acceso, la rectificación, la cancelación y la oposición los presenta ella. CiGo no lleva el trámite ni le pone valor a la prueba.</p>
-        <p class="meta"><a href="#productos">Documentos y pasaporte de cosas</a></p>
-        <aside class="statutes" aria-label="Artículos">
-          <p><a href="https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf" target="_blank" rel="noopener noreferrer">Ley Federal de Protección de Datos Personales en Posesión de los Particulares</a>. Arts. 21 a 28: la persona titular pide acceso, rectificación, cancelación u oposición al responsable y acredita su identidad.</p>
-          <p><a href="https://www.diputados.gob.mx/LeyesBiblio/pdf/LGPDPPSO.pdf" target="_blank" rel="noopener noreferrer">Ley General de Protección de Datos Personales en Posesión de Sujetos Obligados</a>. Arts. 37 a 41 y 43, el mismo derecho ante una autoridad. Los arts. 4 y 9 remiten al código procesal cuando la ley de datos calla.</p>
-          <p><a href="https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf" target="_blank" rel="noopener noreferrer">Código Nacional de Procedimientos Civiles y Familiares</a>. Arts. 348 y 350: la información en una cadena de bloques se reconoce como prueba; en una cadena pública hace prueba plena si sigue íntegra y confiable. El art. 349 valora el método. El art. 2, fracción VII, llama pública a la cadena abierta. Vigencia gradual, a más tardar el 1 de abril de 2027.</p>
-        </aside>
+        <p class="kicker">Datos y gobernanza</p>
+        <h2>La institución administra su nodo; la persona conserva sus claves.</h2>
+        <p class="lead">Peranto no opera una base central de datos personales. La información identificable capturada para emitir una credencial permanece en el navegador de la computadora de la institución y solo los datos de la persona pasan a su credencial.</p>
+        <div class="facts">
+          <article class="card">
+            <h3>Qué queda local</h3>
+            <p>El padrón y los datos de emisión viven en el perfil del navegador de la institución. Si ese perfil se elimina sin respaldo, la información local puede perderse.</p>
+          </article>
+          <article class="card">
+            <h3>Qué queda en cadena</h3>
+            <p>El protocolo registra huellas criptográficas y datos públicos necesarios para verificar estado y autoría, no el contenido identificable en claro. Una huella pública puede ser correlacionable y debe explicarse en el aviso de la institución.</p>
+          </article>
+          <article class="card">
+            <h3>Quién gobierna</h3>
+            <p>Quien emite puede revocar. Quien convoca cierra la votación. Los miembros autorizados del nodo pueden crear convocatorias. El cierre autoservicio del nodo aún no tiene interfaz y se acompaña técnicamente.</p>
+          </article>
+        </div>
+        <p>Los contratos y operaciones del piloto corren en una red de pruebas con PAS, un token sin valor real. No se mueve dinero real. Los DIDs pueden incluir datos públicos solo cuando la persona decide publicarlos; el piloto no obliga a volver público un dato personal.</p>
+        <p class="meta"><a href="tickets.html">Boletaje y acceso</a> · <a href="https://cigo.peranto.app/whitepaper.html">Protocolo técnico</a></p>
+        <details class="legal-details">
+          <summary>Consultar referencias legales</summary>
+          <aside class="statutes" aria-label="Artículos">
+            <p><a href="https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf" target="_blank" rel="noopener noreferrer">Ley Federal de Protección de Datos Personales en Posesión de los Particulares</a>. Arts. 21 a 28: la persona titular pide acceso, rectificación, cancelación u oposición al responsable y acredita su identidad.</p>
+            <p><a href="https://www.diputados.gob.mx/LeyesBiblio/pdf/LGPDPPSO.pdf" target="_blank" rel="noopener noreferrer">Ley General de Protección de Datos Personales en Posesión de Sujetos Obligados</a>. Arts. 37 a 41 y 43, el mismo derecho ante una autoridad.</p>
+            <p><a href="https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf" target="_blank" rel="noopener noreferrer">Código Nacional de Procedimientos Civiles y Familiares</a>. Arts. 348 a 350: reconocimiento y valoración de información en una cadena de bloques. Vigencia gradual, a más tardar el 1 de abril de 2027.</p>
+          </aside>
+        </details>
       </div>
     </section>
 
     <section id="preguntas">
       <div class="wrap">
-        <p class="kicker">Resolución de dudas técnicas</p>
-        <h2>Preguntas de directores y administradores.</h2>
-        <p class="lead">Emisión, hardware y qué hace la laptop del puesto.</p>
-        <details open>
+        <p class="kicker">Antes de decidir</p>
+        <h2>Preguntas del piloto.</h2>
+        <p class="lead">Alcance, operación, hardware y límites actuales.</p>
+        <details>
           <summary>¿Qué pasa si se cae el internet en la caseta?</summary>
           <p>La caseta se detiene. El puesto consulta el registro anclado en la cadena para saber si la credencial sigue vigente. Sin internet, esa revisión no cierra y no hay pase. Quien no necesita internet es la persona: la cartera de CiGo lleva la credencial en el teléfono.</p>
         </details>
@@ -478,8 +392,20 @@
           <p>No. La persona es dueña del dato que firmó y ella pide el acceso, la rectificación, la cancelación o la oposición. CiGo no envía esa solicitud. Los artículos están en <a href="#datos">la firma y los datos</a>.</p>
         </details>
         <details>
-          <summary>¿CiGo reemplaza una compraventa o una carta poder?</summary>
-          <p>No. Siguen siendo actos civiles, y muchos todavía se hacen en papel. Documentos y el pasaporte de la cosa buscan atribuir el archivo y la firma a quien los creó. El código procesal reconoce como prueba la información en una cadena de bloques. No sustituye el acto.</p>
+          <summary>¿Qué puede hacer un sindicato con CiGo?</summary>
+          <p>Emitir la credencial digital de cada agremiado y abrir votaciones internas. La convocatoria se consulta y se vota en la aplicación; las notificaciones push están en integración. Al cerrar se exportan conteo y trazabilidad en CSV. La persona responsable lo incorpora manualmente a Documentos y lo firma con la credencial acordada, incluida una que acredite posesión de FIEL o FIREL.</p>
+        </details>
+        <details>
+          <summary>¿El piloto tiene costo?</summary>
+          <p>Dura tres meses y no tiene costo monetario de implementación para hasta 50 participantes. La institución aporta equipos, teléfonos, hardware, capacitación interna y una carta convenio que define los alcances para mencionar su participación. Por encima de 50 participantes se acuerdan alcance y costo.</p>
+        </details>
+        <details>
+          <summary>¿El recibo de voto revela la opción?</summary>
+          <p>No. Acredita la participación y no dice la opción marcada. En votaciones privadas, la opción se cifra; el contrato y la gestión de las pruebas de conocimiento cero continúan en desarrollo durante el piloto.</p>
+        </details>
+        <details>
+          <summary>¿Qué pasa al terminar los tres meses?</summary>
+          <p>La institución puede concluir el piloto o continuar con acompañamiento desde $1,500 MXN mensuales durante 12 meses, según alcance. Incluye soporte operativo y corrección de errores. Hardware, comisiones de red y desarrollos exclusivos no están incluidos; las personalizaciones se cotizan aparte.</p>
         </details>
       </div>
     </section>
@@ -488,8 +414,8 @@
       <div class="wrap close">
         <form class="card" id="solicitud" data-form>
           <p class="kicker">Programa de pilotos pioneros</p>
-          <h2>Postula tu institución a 50 credenciales.</h2>
-          <p class="lead">Deja los datos para coordinar la instalación del escritorio y la sesión de atestación.</p>
+          <h2>Postula tu institución al piloto de tres meses.</h2>
+          <p class="lead">Hasta 50 participantes, no tiene costo monetario de implementación. La carta convenio define alcance, responsabilidades y la autorización limitada para mencionar la participación al buscar financiamiento. Todo material sensible o uso de logotipo requiere la aprobación acordada.</p>
           <label class="field">Nombre del responsable
             <input name="name" required maxlength="120" placeholder="Ej. Lic. Carlos Méndez" autocomplete="name" />
           </label>
@@ -502,8 +428,11 @@
               <option>Cooperativa / comunidad</option>
             </select>
           </label>
-          <label class="field">Número estimado de miembros
+          <label class="field">Tamaño total de la organización
             <input name="size" required maxlength="20" placeholder="Ej. 350 personas" inputmode="numeric" />
+          </label>
+          <label class="field">Participantes previstos en el piloto
+            <input name="pilotSize" required type="number" min="1" max="100000" placeholder="Ej. 50 participantes" inputmode="numeric" />
           </label>
           <label class="field">Correo institucional
             <input name="email" type="email" required maxlength="120" placeholder="carlos.mendez@tuorganizacion.edu.mx" autocomplete="email" />
@@ -529,10 +458,38 @@
         <aside class="card">
           <p class="kicker">Contacto directo</p>
           <h3>Edgar · fundador y arquitecto de CiGo</h3>
-          <p>Agenda 10 minutos. En la llamada vemos la emisión en tu teléfono y la lectura en la laptop del puesto.</p>
-          <a class="btn solid" href="https://calendly.com/edoga-salinas/one-click-kyc" target="_blank" rel="noopener noreferrer">Agendar videollamada de 10 min</a>
-          <p class="meta"><a href="https://www.linkedin.com/in/edogasalinas" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <a href="https://cryptohumano.github.io/peranto-protocol/#/u/@edo">Página pública</a> · <a href="https://wa.me/525621208481?text=Hola%20Edgar%2C%20quiero%20la%20videollamada%20de%2010%20minutos%20del%20piloto%20CiGo.">WhatsApp</a></p>
+          <p>Agenda 20 minutos. En la demostración vemos emisión, verificación y el proceso que interesa a tu institución.</p>
+          <a class="btn solid" href="https://calendly.com/edoga-salinas/one-click-kyc" target="_blank" rel="noopener noreferrer">Agendar demostración de 20 min</a>
+          <p class="meta"><a href="https://www.linkedin.com/in/edogasalinas" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <a href="https://cryptohumano.github.io/peranto-protocol/#/u/@edo">Página pública</a> · <a href="https://wa.me/525621208481?text=Hola%20Edgar%2C%20quiero%20la%20demostraci%C3%B3n%20de%2020%20minutos%20del%20piloto%20CiGo.">WhatsApp</a></p>
         </aside>
+      </div>
+    </section>
+
+    <section class="night-band" id="descarga">
+      <div class="wrap">
+        <p class="kicker">Para participantes del piloto</p>
+        <h2>CiGo en el teléfono y Aura en el navegador.</h2>
+        <p class="lead">La instalación se realiza durante el acompañamiento. CiGo lleva la credencial en Android; Aura firma desde la computadora de la institución.</p>
+        <div class="cards">
+          <article class="card">
+            <p class="kicker">Android · 0.1.104</p>
+            <h3>CiGo para el teléfono</h3>
+            <p>Android 8 o más nuevo. No hace falta modo desarrollador. Al abrir el archivo, el teléfono pide permitir la instalación desde Chrome, una sola vez.</p>
+            <div class="actions">
+              <a class="btn solid" href="downloads/aura-wallet.apk">Descargar CiGo</a>
+            </div>
+            <p class="note">Chrome puede advertir sobre la instalación desde fuera de Play Store. Durante el piloto se acompaña este paso. La frase de recuperación es la única forma de recuperar la cartera si se desinstala la aplicación.</p>
+          </article>
+          <article class="card">
+            <p class="kicker">Chrome · 0.2.0</p>
+            <h3>Aura para el navegador</h3>
+            <p>La extensión firma desde el escritorio de CiGo. Usa la misma frase de recuperación que la app del teléfono.</p>
+            <div class="actions">
+              <a class="btn solid" href="https://chromewebstore.google.com/detail/aura-wallet/jgjhbhonfpoalhlbnmgffdcpjfdggbhd?hl=es" target="_blank" rel="noopener noreferrer">Instalar en Chrome</a>
+            </div>
+            <p class="note">La institución usa sus propias computadoras. Peranto ayuda con la configuración, capacitación y pruebas del hardware.</p>
+          </article>
+        </div>
       </div>
     </section>
   </main>
@@ -545,14 +502,15 @@
         <p class="meta">WSIS Forum · UIT / ONU</p>
       </div>
       <div>
-        <h3>Infraestructura</h3>
+        <h3>Recorrido</h3>
         <ul>
-          <li><a href="#cigo">Credencial</a></li>
-          <li><a href="#accesos">Bitácora del puesto</a></li>
-          <li><a href="#productos">Boletos, voto, documentos y cosas</a></li>
-          <li><a href="#casos">Casos, incluida la caseta</a></li>
-          <li><a href="#plastico">Frente al plástico</a></li>
-          <li><a href="#datos">La firma y los datos</a></li>
+          <li><a href="#soluciones">Soluciones por audiencia</a></li>
+          <li><a href="#evidencia">Operación actual</a></li>
+          <li><a href="#pioneros">Alcance del piloto</a></li>
+          <li><a href="#piloto">Criterios y continuidad</a></li>
+          <li><a href="#datos">Datos y gobernanza</a></li>
+          <li><a href="#preguntas">Preguntas</a></li>
+          <li><a href="#descarga">Ya participo</a></li>
         </ul>
       </div>
       <div>
@@ -568,7 +526,7 @@
         <h3>Contacto</h3>
         <ul>
           <li><a href="#postular">Programa piloto pionero</a></li>
-          <li><a href="https://calendly.com/edoga-salinas/one-click-kyc" target="_blank" rel="noopener noreferrer">Videollamada de 10 min</a></li>
+          <li><a href="https://calendly.com/edoga-salinas/one-click-kyc" target="_blank" rel="noopener noreferrer">Demostración de 20 min</a></li>
           <li><a href="mailto:outreach@peranto.app">outreach@peranto.app</a></li>
           <li><a href="https://www.linkedin.com/in/edogasalinas" target="_blank" rel="noopener noreferrer">LinkedIn de Edgar</a></li>
           <li><a href="https://cryptohumano.github.io/peranto-protocol/#/u/@edo">Página pública</a></li>
