@@ -116,7 +116,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=8" />
+  <link rel="stylesheet" href="styles.css?v=10" />
   <meta name="theme-color" content="#0a1018" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%230a1018' width='32' height='32' rx='8'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%233da1bc'/%3E%3C/svg%3E" />
 </head>
@@ -454,31 +454,40 @@
         <p class="kicker">Criterios de éxito</p>
         <h2>El piloto termina con un proceso operado por la institución.</h2>
         <p class="lead">Al inicio se acuerdan el número de participantes y uno o dos procesos principales. El éxito no se mide por descargar una aplicación, sino por completar el flujo con las personas responsables.</p>
-        <div class="facts">
-          <article class="card">
+        <div class="success-grid">
+          <article class="success-card">
+            <p class="kicker">Entregable al mes 3</p>
             <h3>Credenciales</h3>
-            <p>Participantes acordados credencializados; administradores capaces de emitir, verificar y revocar; usuarios capaces de presentar su credencial.</p>
+            <ul class="deliverables"><li>Participantes acordados credencializados</li><li>Administradores capaces de emitir y revocar</li><li>Personas capaces de presentar y verificar</li></ul>
+            <span class="deliverable-badge">✓ Flujo completado</span>
           </article>
-          <article class="card">
+          <article class="success-card">
+            <p class="kicker">Entregable al mes 3</p>
             <h3>Votación o accesos</h3>
-            <p>Una convocatoria o jornada real abierta, operada, cerrada y documentada; o una bitácora de accesos utilizada correctamente por el puesto.</p>
+            <ul class="deliverables"><li>Una jornada real abierta y operada</li><li>Cierre documentado o bitácora utilizada</li><li>Responsables capaces de repetir el proceso</li></ul>
+            <span class="deliverable-badge">✓ Acta o bitácora exportable</span>
           </article>
-          <article class="card">
+          <article class="success-card">
+            <p class="kicker">Entregable al mes 3</p>
             <h3>Boletaje</h3>
-            <p>Eventos, cobros y dispersión de prueba, accesos, conteo, cancelaciones, reembolsos y reglas de negocio ejecutados sin mover dinero real.</p>
+            <ul class="deliverables"><li>Función publicada con reglas visibles</li><li>Boletos emitidos y accesos contabilizados</li><li>Cancelación, reembolso o dispersión ensayada</li></ul>
+            <span class="deliverable-badge">✓ Operación en red de prueba</span>
           </article>
         </div>
         <p class="note">Los incidentes se documentan. Peranto corrige errores y las necesidades generales viables se incorporan a la hoja de ruta común. Durante el piloto se liberan versiones estables de prueba de contratos, aplicación, escritorios y Aura.</p>
-        <div class="cards">
-          <article class="card">
+        <div class="continuity-grid">
+          <article class="exit-card">
             <p class="kicker">Al concluir</p>
             <h3>Cerrar o continuar</h3>
-            <p>La institución puede dar por terminado el piloto, conservar sus documentos y evaluar una nueva etapa. La salida y el uso posterior del nombre institucional quedan sujetos al convenio.</p>
+            <p>La institución puede terminar el piloto, conservar sus documentos y evaluar una nueva etapa sin permanencia obligatoria.</p>
           </article>
-          <article class="card">
+          <article class="pricing-card">
             <p class="kicker">Continuidad opcional</p>
-            <h3>Desde $1,500 MXN mensuales por 12 meses</h3>
-            <p>Incluye soporte operativo y corrección de errores. Hardware, comisiones de red y desarrollos exclusivos no están incluidos. Las mejoras generales pueden incorporarse al producto común; las personalizaciones se cotizan aparte.</p>
+            <div class="price"><small>Desde</small><strong>$1,500</strong><span>MXN al mes · hasta 12 meses</span></div>
+            <div class="price-columns">
+              <div><b>Incluye</b><ul><li>Soporte operativo</li><li>Corrección de errores</li><li>Mejoras generales viables</li></ul></div>
+              <div><b>No incluye</b><ul><li>Hardware o comisiones de red</li><li>Desarrollos exclusivos</li><li>Personalizaciones, cotizadas aparte</li></ul></div>
+            </div>
           </article>
         </div>
       </div>
@@ -489,30 +498,44 @@
         <p class="kicker">Datos y gobernanza</p>
         <h2>La institución administra su nodo; la persona conserva sus claves.</h2>
         <p class="lead">Peranto no opera una base central de datos personales. La información identificable capturada para emitir una credencial permanece en el navegador de la computadora de la institución y solo los datos de la persona pasan a su credencial.</p>
-        <div class="facts">
-          <article class="card">
-            <h3>Qué queda local</h3>
-            <p>El padrón y los datos de emisión viven en el perfil del navegador de la institución. Si ese perfil se elimina sin respaldo, la información local puede perderse.</p>
+        <div class="data-map">
+          <article class="data-zone local">
+            <p class="kicker">En la computadora institucional</p>
+            <h3>Local y bajo tu operación</h3>
+            <ul><li>Nombres, padrón y datos de emisión en claro</li><li>Copia de credenciales emitidas para revocarlas</li><li>Bitácoras conservadas en ese navegador</li></ul>
+            <p class="data-caveat">No se envían a una base central de Peranto. La institución debe respaldar y proteger ese perfil.</p>
           </article>
-          <article class="card">
-            <h3>Qué queda en cadena</h3>
-            <p>El protocolo registra huellas criptográficas y datos públicos necesarios para verificar estado y autoría, no el contenido identificable en claro. Una huella pública puede ser correlacionable y debe explicarse en el aviso de la institución.</p>
-          </article>
-          <article class="card">
-            <h3>Quién gobierna</h3>
-            <p>Quien emite puede revocar. Quien convoca cierra la votación. Los miembros autorizados del nodo pueden crear convocatorias. El cierre autoservicio del nodo aún no tiene interfaz y se acompaña técnicamente.</p>
+          <article class="data-zone chain">
+            <p class="kicker">En la red descentralizada</p>
+            <h3>Pruebas públicas, no expedientes</h3>
+            <ul><li>Huellas criptográficas y estado de vigencia</li><li>Tipo de credencial, emisor y autoría necesaria</li><li>Registros verificables de las operaciones</li></ul>
+            <p class="data-caveat">No se publica el contenido identificable en claro. Una huella puede ser correlacionable y debe explicarse en el aviso.</p>
           </article>
         </div>
-        <p>Los contratos y operaciones del piloto corren en una red de pruebas con PAS, un token sin valor real. No se mueve dinero real. Los DIDs pueden incluir datos públicos solo cuando la persona decide publicarlos; el piloto no obliga a volver público un dato personal.</p>
+        <div class="governance-strip"><b>Quién decide</b><span>Quien emite revoca.</span><span>Quien convoca cierra.</span><span>La persona conserva sus llaves.</span><span>Peranto acompaña la operación.</span></div>
+        <p class="network-note">El piloto opera en Paseo con PAS, un token de prueba sin valor real. No mueve dinero real ni obliga a publicar un dato personal.</p>
         <p class="meta"><a href="tickets.html">Boletaje y acceso</a> · <a href="https://cigo.peranto.app/whitepaper.html">Protocolo técnico</a></p>
-        <details class="legal-details">
-          <summary>Consultar referencias legales</summary>
-          <aside class="statutes" aria-label="Artículos">
-            <p><a href="https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf" target="_blank" rel="noopener noreferrer">Ley Federal de Protección de Datos Personales en Posesión de los Particulares</a>. Arts. 21 a 28: la persona titular pide acceso, rectificación, cancelación u oposición al responsable y acredita su identidad.</p>
-            <p><a href="https://www.diputados.gob.mx/LeyesBiblio/pdf/LGPDPPSO.pdf" target="_blank" rel="noopener noreferrer">Ley General de Protección de Datos Personales en Posesión de Sujetos Obligados</a>. Arts. 37 a 41 y 43, el mismo derecho ante una autoridad.</p>
-            <p><a href="https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf" target="_blank" rel="noopener noreferrer">Código Nacional de Procedimientos Civiles y Familiares</a>. Arts. 348 a 350: reconocimiento y valoración de información en una cadena de bloques. Vigencia gradual, a más tardar el 1 de abril de 2027.</p>
-          </aside>
-        </details>
+        <div class="legal-badges" aria-label="Referencias legales">
+          <a href="https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf" target="_blank" rel="noopener noreferrer">
+            <span>Privacidad · particulares</span>
+            <b>LFPDPPP · Artículos 21 al 28</b>
+            <small><strong>Art. 21:</strong> deber de confidencialidad. <strong>Arts. 22–28:</strong> acceso, rectificación, cancelación y oposición, así como su solicitud ante la persona responsable.</small>
+            <em>Consultar ley original ↗</em>
+          </a>
+          <a href="https://www.diputados.gob.mx/LeyesBiblio/pdf/LGPDPPSO.pdf" target="_blank" rel="noopener noreferrer">
+            <span>Privacidad · sector público</span>
+            <b>LGPDPPSO · Artículos 37 al 41 y 43</b>
+            <small><strong>Arts. 37–41:</strong> ejercicio de derechos ARCO ante sujetos obligados. <strong>Art. 43:</strong> requisitos de la solicitud.</small>
+            <em>Consultar ley original ↗</em>
+          </a>
+          <a href="https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf" target="_blank" rel="noopener noreferrer">
+            <span>Evidencia digital</span>
+            <b>CNPCF · Artículos 348 al 350</b>
+            <small>Reglas para reconocer y valorar información contenida o registrada en medios digitales, incluida una cadena de bloques.</small>
+            <em>Consultar código original ↗</em>
+          </a>
+        </div>
+        <p class="legal-note">Referencias informativas; el convenio y los avisos de cada institución requieren revisión jurídica propia.</p>
       </div>
     </section>
 
@@ -520,43 +543,51 @@
       <div class="wrap">
         <p class="kicker">Antes de decidir</p>
         <h2>Preguntas del piloto.</h2>
-        <p class="lead">Alcance, operación, hardware y límites actuales.</p>
-        <details>
+        <p class="lead">Elige el tema que corresponde a tu decisión.</p>
+        <div class="faq-filters" role="toolbar" aria-label="Filtrar preguntas">
+          <button type="button" data-faq-filter="all" aria-pressed="true">Todas</button>
+          <button type="button" data-faq-filter="operation" aria-pressed="false">Operación y caseta</button>
+          <button type="button" data-faq-filter="privacy" aria-pressed="false">Privacidad y ley</button>
+          <button type="button" data-faq-filter="pilot" aria-pressed="false">Condiciones del piloto</button>
+        </div>
+        <div class="faq-list">
+        <details data-faq-category="operation">
           <summary>¿Qué pasa si se cae el internet en la caseta?</summary>
           <p>La caseta se detiene. El puesto consulta el registro anclado en la cadena para saber si la credencial sigue vigente. Sin internet, esa revisión no cierra y no hay pase. Quien no necesita internet es la persona: la cartera de CiGo lleva la credencial en el teléfono.</p>
         </details>
-        <details>
+        <details data-faq-category="operation">
           <summary>¿Cómo se emite sin que otra persona se quede el pase?</summary>
           <p>El administrador abre el reto en el escritorio y la persona lo firma con su teléfono, por NFC o con el QR del registro. La credencial queda ligada a las claves de ese teléfono.</p>
         </details>
-        <details>
+        <details data-faq-category="operation">
           <summary>¿Por qué la validación toma unos 10 segundos?</summary>
           <p>El ciclo que medimos en operación incluye acercar el teléfono, la lectura NFC o el enfoque del QR, la comprobación de la firma en el escritorio y la línea que ve el guardia en la bitácora. Arriba se ve ese ciclo: la cartera en el teléfono y el puesto en la laptop.</p>
         </details>
-        <details>
+        <details data-faq-category="operation">
           <summary>¿Qué equipo hace falta?</summary>
           <p>Una computadora de la organización con el escritorio CiGo, internet en la caseta, y un lector USB NFC o la cámara para el QR. El puesto no pide un torniquete ni un servidor aparte.</p>
         </details>
-        <details>
+        <details data-faq-category="privacy">
           <summary>¿CiGo tramita los derechos ARCO?</summary>
           <p>No. La persona es dueña del dato que firmó y ella pide el acceso, la rectificación, la cancelación o la oposición. CiGo no envía esa solicitud. Los artículos están en <a href="#datos">la firma y los datos</a>.</p>
         </details>
-        <details>
+        <details data-faq-category="pilot">
           <summary>¿Qué puede hacer un sindicato con CiGo?</summary>
           <p>Emitir la credencial digital de cada agremiado y abrir votaciones internas. La convocatoria se consulta y se vota en la aplicación; las notificaciones push están en integración. Al cerrar se exportan conteo y trazabilidad en CSV. La persona responsable lo incorpora manualmente a Documentos y lo firma con la credencial acordada, incluida una que acredite posesión de FIEL o FIREL.</p>
         </details>
-        <details>
+        <details data-faq-category="pilot">
           <summary>¿El piloto tiene costo?</summary>
           <p>Dura tres meses y no tiene costo monetario de implementación para hasta 50 participantes. La institución aporta equipos, teléfonos, hardware, capacitación interna y una carta convenio que define los alcances para mencionar su participación. Por encima de 50 participantes se acuerdan alcance y costo.</p>
         </details>
-        <details>
+        <details data-faq-category="privacy">
           <summary>¿El recibo de voto revela la opción?</summary>
           <p>No. Acredita la participación y no dice la opción marcada. En votaciones privadas, la opción se cifra; el contrato y la gestión de las pruebas de conocimiento cero continúan en desarrollo durante el piloto.</p>
         </details>
-        <details>
+        <details data-faq-category="pilot">
           <summary>¿Qué pasa al terminar los tres meses?</summary>
           <p>La institución puede concluir el piloto o continuar con acompañamiento desde $1,500 MXN mensuales durante 12 meses, según alcance. Incluye soporte operativo y corrección de errores. Hardware, comisiones de red y desarrollos exclusivos no están incluidos; las personalizaciones se cotizan aparte.</p>
         </details>
+        </div>
       </div>
     </section>
 
@@ -565,7 +596,8 @@
         <form class="card" id="solicitud" data-form>
           <p class="kicker">Programa de pilotos pioneros</p>
           <h2>Cuéntanos qué proceso quieres probar.</h2>
-          <p class="lead">Esta página no guarda tus datos. Al terminar abre WhatsApp o tu correo con la postulación preparada.</p>
+          <p class="privacy-badge">🔒 Sin almacenamiento en servidores ajenos · Envío directo desde tu dispositivo.</p>
+          <p class="lead">Al terminar se abre el canal que elijas con la postulación preparada.</p>
           <div class="form-grid">
             <label class="field">Nombre del responsable
               <input name="name" required maxlength="120" placeholder="Ej. Lic. Carlos Méndez" autocomplete="name" />
@@ -601,7 +633,7 @@
           <div class="actions">
             <button class="btn solid" type="submit" data-send>Abrir WhatsApp con la postulación</button>
           </div>
-          <p class="note">Al enviar se abre WhatsApp o tu correo con estos datos. Esta página no los guarda en un servidor.</p>
+          <p class="note">Revisa el mensaje preparado antes de enviarlo.</p>
           <div class="ready" data-ready hidden>
             <p data-status></p>
             <p data-summary></p>
@@ -623,12 +655,13 @@
       </div>
     </section>
 
-    <section class="night-band" id="descarga">
+    <section id="descarga" class="resources-section">
       <div class="wrap">
-        <p class="kicker">Para participantes del piloto</p>
-        <h2>CiGo en el teléfono y Aura en el navegador.</h2>
-        <p class="lead">La instalación se realiza durante el acompañamiento. CiGo lleva la credencial en Android; Aura firma desde la computadora de la institución.</p>
-        <div class="cards">
+        <details class="resources-details">
+          <summary><span><small>Área secundaria</small><b>Recursos para pilotos activos</b><em>Instaladores de CiGo y Aura</em></span></summary>
+          <div class="resources-content">
+            <p>La instalación se realiza durante el acompañamiento. CiGo lleva la credencial en Android; Aura firma desde la computadora institucional.</p>
+            <div class="cards">
           <article class="card">
             <p class="kicker">Android · 0.1.120</p>
             <h3>CiGo para el teléfono</h3>
@@ -647,7 +680,9 @@
             </div>
             <p class="note">La institución usa sus propias computadoras. Peranto ayuda con la configuración, capacitación y pruebas del hardware.</p>
           </article>
-        </div>
+            </div>
+          </div>
+        </details>
       </div>
     </section>
   </main>
@@ -660,19 +695,17 @@
         <p class="meta">WSIS Forum · UIT / ONU</p>
       </div>
       <div>
-        <h3>Recorrido</h3>
+        <h3>Instituciones</h3>
         <ul>
           <li><a href="#soluciones">Soluciones por audiencia</a></li>
-          <li><a href="#evidencia">Operación actual</a></li>
           <li><a href="#pioneros">Alcance del piloto</a></li>
           <li><a href="#piloto">Criterios y continuidad</a></li>
-          <li><a href="#datos">Datos y gobernanza</a></li>
           <li><a href="#preguntas">Preguntas</a></li>
-          <li><a href="#descarga">Ya participo</a></li>
+          <li><a href="#descarga">Recursos para pilotos activos</a></li>
         </ul>
       </div>
       <div>
-        <h3>Código y auditoría</h3>
+        <h3>Desarrolladores y auditoría</h3>
         <ul>
           <li><a href="https://github.com/cryptohumano/peranto-protocol">Código en GitHub</a></li>
           <li><a href="https://cigo.peranto.app/whitepaper.html">Apartado técnico</a></li>
@@ -681,7 +714,7 @@
         </ul>
       </div>
       <div>
-        <h3>Contacto</h3>
+        <h3>Contacto directo</h3>
         <ul>
           <li><a href="#postular">Programa piloto pionero</a></li>
           <li><a href="https://calendly.com/edoga-salinas/one-click-kyc" target="_blank" rel="noopener noreferrer">Demostración de 20 min</a></li>
@@ -693,6 +726,6 @@
     </div>
     <div class="wrap legal">© 2026 <a href="https://peranto.app">Peranto</a> / CiGo. <a href="https://cigo.peranto.app/whitepaper.html">Apartado técnico</a></div>
   </footer>
-  <script src="site.js?v=2"></script>
+  <script src="site.js?v=3"></script>
 </body>
 </html>

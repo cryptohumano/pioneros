@@ -116,7 +116,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../styles.css?v=8" />
+  <link rel="stylesheet" href="../styles.css?v=10" />
   <meta name="theme-color" content="#0a1018" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%230a1018' width='32' height='32' rx='8'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%233da1bc'/%3E%3C/svg%3E" />
 </head>
@@ -710,31 +710,40 @@
         <p class="kicker">Success criteria</p>
         <h2>The pilot ends with a process operated by the institution.</h2>
         <p class="lead">The number of participants and one or two primary processes are agreed at the start. Success is not measured by downloading an app, but by completing the workflow with the responsible people.</p>
-        <div class="facts">
-          <article class="card">
+        <div class="success-grid">
+          <article class="success-card">
+            <p class="kicker">Month 3 deliverable</p>
             <h3>Credentials</h3>
-            <p>Agreed participants credentialed; administrators able to issue, verify and revoke; users able to present their credential.</p>
+            <ul class="deliverables"><li>Agreed participants credentialed</li><li>Administrators able to issue and revoke</li><li>People able to present and verify</li></ul>
+            <span class="deliverable-badge">✓ Workflow completed</span>
           </article>
-          <article class="card">
+          <article class="success-card">
+            <p class="kicker">Month 3 deliverable</p>
             <h3>Voting or access</h3>
-            <p>One real call or session opened, operated, closed and documented; or an access log correctly used by the desk.</p>
+            <ul class="deliverables"><li>One real session opened and operated</li><li>Documented close or log in use</li><li>Operators able to repeat the process</li></ul>
+            <span class="deliverable-badge">✓ Exportable record or log</span>
           </article>
-          <article class="card">
+          <article class="success-card">
+            <p class="kicker">Month 3 deliverable</p>
             <h3>Ticketing</h3>
-            <p>Events, test charges and distribution, admissions, counts, cancellations, refunds and business rules executed without moving real money.</p>
+            <ul class="deliverables"><li>Event published with visible rules</li><li>Tickets issued and admissions counted</li><li>Cancellation, refund or split tested</li></ul>
+            <span class="deliverable-badge">✓ Test-network operation</span>
           </article>
         </div>
         <p class="note">Incidents are documented. Peranto fixes errors, and viable general needs enter the shared roadmap. Stable test releases of the contracts, app, desks and Aura are delivered during the pilot.</p>
-        <div class="cards">
-          <article class="card">
+        <div class="continuity-grid">
+          <article class="exit-card">
             <p class="kicker">At the end</p>
             <h3>Close or continue</h3>
-            <p>The institution may conclude the pilot, keep its documents and evaluate a next stage. Exit and later use of the institution's name remain subject to the agreement.</p>
+            <p>The institution may conclude the pilot, keep its documents and evaluate a next stage with no mandatory continuation.</p>
           </article>
-          <article class="card">
+          <article class="pricing-card">
             <p class="kicker">Optional continuation</p>
-            <h3>From MXN $1,500 per month for 12 months</h3>
-            <p>Includes operational support and bug fixes. Hardware, network fees and exclusive development are not included. General improvements may enter the shared product; custom work is quoted separately.</p>
+            <div class="price"><small>From</small><strong>$1,500</strong><span>MXN per month · up to 12 months</span></div>
+            <div class="price-columns">
+              <div><b>Included</b><ul><li>Operational support</li><li>Bug fixes</li><li>Viable general improvements</li></ul></div>
+              <div><b>Not included</b><ul><li>Hardware or network fees</li><li>Exclusive development</li><li>Custom work, quoted separately</li></ul></div>
+            </div>
           </article>
         </div>
       </div>
@@ -745,30 +754,44 @@
         <p class="kicker">Data and governance</p>
         <h2>The institution manages its node; the person keeps their keys.</h2>
         <p class="lead">Peranto does not operate a central database of personal information. Identifiable information captured to issue a credential stays in the browser on the institution's computer, and only that person's data enters their credential.</p>
-        <div class="facts">
-          <article class="card">
-            <h3>What stays local</h3>
-            <p>The roll and issuance data live in the institution's browser profile. If that profile is removed without a backup, local information may be lost.</p>
+        <div class="data-map">
+          <article class="data-zone local">
+            <p class="kicker">On the institution's computer</p>
+            <h3>Local and under your operation</h3>
+            <ul><li>Names, roll and issuance data in clear text</li><li>Issued credential copies needed for revocation</li><li>Logs retained in that browser</li></ul>
+            <p class="data-caveat">They are not sent to a central Peranto database. The institution must back up and protect this profile.</p>
           </article>
-          <article class="card">
-            <h3>What goes on-chain</h3>
-            <p>The protocol records cryptographic hashes and public data needed to verify status and authorship, not identifiable content in clear text. A public hash may be correlatable and should be explained in the institution's notice.</p>
-          </article>
-          <article class="card">
-            <h3>Who governs</h3>
-            <p>The issuer can revoke. The caller closes the vote. Authorized node members may create calls. Self-service node closure does not yet have a UI and receives technical assistance.</p>
+          <article class="data-zone chain">
+            <p class="kicker">On the decentralized network</p>
+            <h3>Public proofs, not case files</h3>
+            <ul><li>Cryptographic hashes and validity status</li><li>Credential type, issuer and required authorship</li><li>Verifiable records of operations</li></ul>
+            <p class="data-caveat">Identifiable content is not published in clear text. A hash can be correlatable and should be explained in the notice.</p>
           </article>
         </div>
-        <p>Pilot contracts and operations run on a test network with PAS, a token with no real value. No real money moves. DIDs may include public data only when the person chooses to publish it; the pilot does not require personal information to become public.</p>
+        <div class="governance-strip"><b>Who decides</b><span>The issuer revokes.</span><span>The caller closes.</span><span>The person keeps their keys.</span><span>Peranto guides operations.</span></div>
+        <p class="network-note">The pilot runs on Paseo with PAS, a test token with no real value. It moves no real money and does not require personal data to become public.</p>
         <p class="meta"><a href="https://cigo.peranto.app/whitepaper.html">Technical protocol</a></p>
-        <details class="legal-details">
-          <summary>See legal references</summary>
-          <aside class="statutes" aria-label="Articles">
-            <p><a href="https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf" target="_blank" rel="noopener noreferrer">Ley Federal de Protección de Datos Personales en Posesión de los Particulares</a>. Arts. 21 to 28: the data subject asks the controller for access, rectification, cancellation or objection, and proves their identity.</p>
-            <p><a href="https://www.diputados.gob.mx/LeyesBiblio/pdf/LGPDPPSO.pdf" target="_blank" rel="noopener noreferrer">Ley General de Protección de Datos Personales en Posesión de Sujetos Obligados</a>. Arts. 37 to 41 and 43, the same right before an authority.</p>
-            <p><a href="https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf" target="_blank" rel="noopener noreferrer">Código Nacional de Procedimientos Civiles y Familiares</a>. Arts. 348 and 350 recognize information on a blockchain as evidence, subject to integrity and reliability.</p>
-          </aside>
-        </details>
+        <div class="legal-badges" aria-label="Legal references">
+          <a href="https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf" target="_blank" rel="noopener noreferrer">
+            <span>Privacy · private entities</span>
+            <b>LFPDPPP · Articles 21 to 28</b>
+            <small><strong>Art. 21:</strong> duty of confidentiality. <strong>Arts. 22–28:</strong> access, rectification, cancellation and objection, including the request to the controller.</small>
+            <em>Read the original law ↗</em>
+          </a>
+          <a href="https://www.diputados.gob.mx/LeyesBiblio/pdf/LGPDPPSO.pdf" target="_blank" rel="noopener noreferrer">
+            <span>Privacy · public sector</span>
+            <b>LGPDPPSO · Articles 37 to 41 and 43</b>
+            <small><strong>Arts. 37–41:</strong> exercising ARCO rights before obligated public entities. <strong>Art. 43:</strong> request requirements.</small>
+            <em>Read the original law ↗</em>
+          </a>
+          <a href="https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf" target="_blank" rel="noopener noreferrer">
+            <span>Digital evidence</span>
+            <b>CNPCF · Articles 348 to 350</b>
+            <small>Rules for recognizing and assessing information contained or recorded in digital media, including a blockchain.</small>
+            <em>Read the original code ↗</em>
+          </a>
+        </div>
+        <p class="legal-note">Informational references only; each institution should obtain its own legal review for agreements and privacy notices.</p>
       </div>
     </section>
 
@@ -776,43 +799,51 @@
       <div class="wrap">
         <p class="kicker">Before deciding</p>
         <h2>Questions from directors, administrators and union leadership.</h2>
-        <p class="lead">Scope, operation, data, hardware and continuity.</p>
-        <details>
+        <p class="lead">Choose the topic that matches your decision.</p>
+        <div class="faq-filters" role="toolbar" aria-label="Filter questions">
+          <button type="button" data-faq-filter="all" aria-pressed="true">All</button>
+          <button type="button" data-faq-filter="operation" aria-pressed="false">Operations and gate</button>
+          <button type="button" data-faq-filter="privacy" aria-pressed="false">Privacy and law</button>
+          <button type="button" data-faq-filter="pilot" aria-pressed="false">Pilot conditions</button>
+        </div>
+        <div class="faq-list">
+        <details data-faq-category="operation">
           <summary>What happens if the gatehouse loses internet?</summary>
           <p>The gate stops. The desk checks the registry anchored on the chain to see whether the credential is still valid. Without internet, that check does not close and there is no pass. The person does not need internet: the CiGo wallet carries the credential on the phone.</p>
         </details>
-        <details>
+        <details data-faq-category="operation">
           <summary>How is it issued so someone else cannot keep the pass?</summary>
           <p>The administrator opens the challenge on the desk and the person signs it from their phone, by NFC or with the registration QR. The credential stays bound to that phone's keys.</p>
         </details>
-        <details>
+        <details data-faq-category="operation">
           <summary>Why does validation take about 10 seconds?</summary>
           <p>The cycle we measure includes bringing the phone close, the NFC read or the QR focus, the signature check on the desk and the line the guard sees in the log. That cycle is above: the wallet on the phone and the desk on the laptop.</p>
         </details>
-        <details>
+        <details data-faq-category="operation">
           <summary>What equipment is required?</summary>
           <p>The organization's computer running the CiGo desk, internet at the gate, and a USB NFC reader or the camera for the QR. The desk does not require a turnstile or a separate server.</p>
         </details>
-        <details>
+        <details data-faq-category="privacy">
           <summary>Does CiGo file ARCO requests?</summary>
           <p>No. The person owns the data they signed, and they ask for access, rectification, cancellation or objection. CiGo does not send that request. The articles are under <a href="#datos">the signature and the data</a>.</p>
         </details>
-        <details>
+        <details data-faq-category="pilot">
           <summary>What can a union do with CiGo?</summary>
           <p>Issue a digital credential for each member and open internal votes. The call is viewed and voted on in the app; push notifications are being integrated. Closing exports count and traceability as CSV. The responsible person manually adds it to Documents and signs it with the agreed credential, including one proving possession of a FIEL or FIREL.</p>
         </details>
-        <details>
+        <details data-faq-category="pilot">
           <summary>Does the pilot have a cost?</summary>
           <p>It runs for three months and has no monetary implementation cost for up to 50 participants. The institution provides equipment, phones, hardware, internal training and an agreement defining the scope for mentioning its participation. Above 50 participants, scope and cost are agreed.</p>
         </details>
-        <details>
+        <details data-faq-category="privacy">
           <summary>Does the ballot receipt reveal the choice?</summary>
           <p>No. It proves participation and does not state the marked choice. In private votes, the choice is encrypted; the contract and zero-knowledge-proof management remain under development during the pilot.</p>
         </details>
-        <details>
+        <details data-faq-category="pilot">
           <summary>What happens after the three months?</summary>
           <p>The institution may conclude the pilot or continue with support for MXN $1,500 per month for 12 months. This includes operational support and bug fixes. Hardware, network fees and exclusive development are not included; custom work is quoted separately.</p>
         </details>
+        </div>
       </div>
     </section>
 
@@ -821,7 +852,8 @@
         <form class="card" id="solicitud" data-form>
           <p class="kicker">Pioneer pilot program</p>
           <h2>Tell us which process you want to test.</h2>
-          <p class="lead">This page does not store your data. When finished, it opens WhatsApp or your email with the application ready.</p>
+          <p class="privacy-badge">🔒 No storage on third-party servers · Sent directly from your device.</p>
+          <p class="lead">When finished, your chosen channel opens with the application ready.</p>
           <div class="form-grid">
             <label class="field">Lead name
               <input name="name" required maxlength="120" placeholder="e.g. Carlos Méndez" autocomplete="name" />
@@ -857,7 +889,7 @@
           <div class="actions">
             <button class="btn solid" type="submit" data-send>Open WhatsApp with this application</button>
           </div>
-          <p class="note">Submitting opens WhatsApp or your email with these details. This page does not store them on a server.</p>
+          <p class="note">Review the prepared message before sending it.</p>
           <div class="ready" data-ready hidden>
             <p data-status></p>
             <p data-summary></p>
@@ -879,12 +911,13 @@
       </div>
     </section>
 
-    <section class="night-band" id="descarga">
+    <section id="descarga" class="resources-section">
       <div class="wrap">
-        <p class="kicker">For pilot participants</p>
-        <h2>CiGo on the phone and Aura in the browser.</h2>
-        <p class="lead">Installation takes place during onboarding. CiGo carries the credential on Android; Aura signs from the institution's computer.</p>
-        <div class="cards">
+        <details class="resources-details">
+          <summary><span><small>Secondary area</small><b>Resources for active pilots</b><em>CiGo and Aura installers</em></span></summary>
+          <div class="resources-content">
+            <p>Installation takes place during onboarding. CiGo carries the credential on Android; Aura signs from the institution's computer.</p>
+            <div class="cards">
           <article class="card">
             <p class="kicker">Android · 0.1.120</p>
             <h3>CiGo for the phone</h3>
@@ -903,7 +936,9 @@
             </div>
             <p class="note">The institution uses its own computers. Peranto helps with setup, training and hardware testing.</p>
           </article>
-        </div>
+            </div>
+          </div>
+        </details>
       </div>
     </section>
   </main>
@@ -916,19 +951,17 @@
         <p class="meta">WSIS Forum · ITU / UN</p>
       </div>
       <div>
-        <h3>Journey</h3>
+        <h3>Institutions</h3>
         <ul>
           <li><a href="#soluciones">Solutions by audience</a></li>
-          <li><a href="#evidencia">Current operation</a></li>
           <li><a href="#pioneros">Pilot scope</a></li>
           <li><a href="#piloto">Criteria and continuity</a></li>
-          <li><a href="#datos">Data and governance</a></li>
           <li><a href="#preguntas">Questions</a></li>
-          <li><a href="#descarga">I participate</a></li>
+          <li><a href="#descarga">Resources for active pilots</a></li>
         </ul>
       </div>
       <div>
-        <h3>Code and audit</h3>
+        <h3>Developers and audit</h3>
         <ul>
           <li><a href="https://github.com/cryptohumano/peranto-protocol">Code on GitHub</a></li>
           <li><a href="https://cigo.peranto.app/whitepaper.html">Technical note</a></li>
@@ -937,7 +970,7 @@
         </ul>
       </div>
       <div>
-        <h3>Contact</h3>
+        <h3>Direct contact</h3>
         <ul>
           <li><a href="#postular">Pioneer pilot program</a></li>
           <li><a href="https://calendly.com/edoga-salinas/one-click-kyc" target="_blank" rel="noopener noreferrer">20-minute demo</a></li>
@@ -949,6 +982,6 @@
     </div>
     <div class="wrap legal">© 2026 <a href="https://peranto.app">Peranto</a> / CiGo. <a href="https://cigo.peranto.app/whitepaper.html">Technical note</a></div>
   </footer>
-  <script src="../site.js?v=2"></script>
+  <script src="../site.js?v=3"></script>
 </body>
 </html>

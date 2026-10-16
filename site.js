@@ -194,6 +194,20 @@
     paint();
   }
 
+  const faqFilters = Array.from(document.querySelectorAll("[data-faq-filter]"));
+  const faqItems = Array.from(document.querySelectorAll("[data-faq-category]"));
+  faqFilters.forEach((button) => {
+    button.addEventListener("click", () => {
+      const category = button.dataset.faqFilter;
+      faqFilters.forEach((item) => item.setAttribute("aria-pressed", item === button ? "true" : "false"));
+      faqItems.forEach((item) => {
+        const visible = category === "all" || item.dataset.faqCategory === category;
+        item.hidden = !visible;
+        if (!visible) item.open = false;
+      });
+    });
+  });
+
   const form = document.querySelector("[data-form]");
   if (form) {
     const ready = form.querySelector("[data-ready]");
