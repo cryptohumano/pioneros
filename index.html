@@ -116,7 +116,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=10" />
+  <link rel="stylesheet" href="styles.css?v=11" />
   <meta name="theme-color" content="#0a1018" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%230a1018' width='32' height='32' rx='8'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%233da1bc'/%3E%3C/svg%3E" />
 </head>
@@ -454,21 +454,22 @@
         <p class="kicker">Criterios de éxito</p>
         <h2>El piloto termina con un proceso operado por la institución.</h2>
         <p class="lead">Al inicio se acuerdan el número de participantes y uno o dos procesos principales. El éxito no se mide por descargar una aplicación, sino por completar el flujo con las personas responsables.</p>
+        <p class="deliverables-label">Entregables acordados al mes 3</p>
         <div class="success-grid">
           <article class="success-card">
-            <p class="kicker">Entregable al mes 3</p>
+            <p class="kicker">Módulo 01 · Identidad</p>
             <h3>Credenciales</h3>
             <ul class="deliverables"><li>Participantes acordados credencializados</li><li>Administradores capaces de emitir y revocar</li><li>Personas capaces de presentar y verificar</li></ul>
             <span class="deliverable-badge">✓ Flujo completado</span>
           </article>
           <article class="success-card">
-            <p class="kicker">Entregable al mes 3</p>
+            <p class="kicker">Módulo 02 · Gobernanza</p>
             <h3>Votación o accesos</h3>
             <ul class="deliverables"><li>Una jornada real abierta y operada</li><li>Cierre documentado o bitácora utilizada</li><li>Responsables capaces de repetir el proceso</li></ul>
             <span class="deliverable-badge">✓ Acta o bitácora exportable</span>
           </article>
           <article class="success-card">
-            <p class="kicker">Entregable al mes 3</p>
+            <p class="kicker">Módulo 03 · Boletaje</p>
             <h3>Boletaje</h3>
             <ul class="deliverables"><li>Función publicada con reglas visibles</li><li>Boletos emitidos y accesos contabilizados</li><li>Cancelación, reembolso o dispersión ensayada</li></ul>
             <span class="deliverable-badge">✓ Operación en red de prueba</span>
@@ -518,18 +519,21 @@
         <div class="legal-badges" aria-label="Referencias legales">
           <a href="https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf" target="_blank" rel="noopener noreferrer">
             <span>Privacidad · particulares</span>
+            <h3>Responsabilidad clara sobre los datos</h3>
             <b>LFPDPPP · Artículos 21 al 28</b>
             <small><strong>Art. 21:</strong> deber de confidencialidad. <strong>Arts. 22–28:</strong> acceso, rectificación, cancelación y oposición, así como su solicitud ante la persona responsable.</small>
             <em>Consultar ley original ↗</em>
           </a>
           <a href="https://www.diputados.gob.mx/LeyesBiblio/pdf/LGPDPPSO.pdf" target="_blank" rel="noopener noreferrer">
             <span>Privacidad · sector público</span>
+            <h3>Derechos ARCO ante autoridades</h3>
             <b>LGPDPPSO · Artículos 37 al 41 y 43</b>
             <small><strong>Arts. 37–41:</strong> ejercicio de derechos ARCO ante sujetos obligados. <strong>Art. 43:</strong> requisitos de la solicitud.</small>
             <em>Consultar ley original ↗</em>
           </a>
           <a href="https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf" target="_blank" rel="noopener noreferrer">
             <span>Evidencia digital</span>
+            <h3>Marco para valorar evidencia digital</h3>
             <b>CNPCF · Artículos 348 al 350</b>
             <small>Reglas para reconocer y valorar información contenida o registrada en medios digitales, incluida una cadena de bloques.</small>
             <em>Consultar código original ↗</em>
@@ -631,13 +635,13 @@
             <label><input type="radio" name="via" value="mail" /> Correo</label>
           </fieldset>
           <div class="actions">
-            <button class="btn solid" type="submit" data-send>Abrir WhatsApp con la postulación</button>
+            <button class="btn solid" type="submit" data-send>Enviar postulación por WhatsApp →</button>
           </div>
           <p class="note">Revisa el mensaje preparado antes de enviarlo.</p>
           <div class="ready" data-ready hidden>
             <p data-status></p>
             <p data-summary></p>
-            <button class="btn ghost" type="button" data-copy>Copiar postulación</button>
+            <button class="copy-link" type="button" data-copy>Copiar postulación</button>
           </div>
         </form>
         <aside class="card application-aside">
@@ -726,6 +730,6 @@
     </div>
     <div class="wrap legal">© 2026 <a href="https://peranto.app">Peranto</a> / CiGo. <a href="https://cigo.peranto.app/whitepaper.html">Apartado técnico</a></div>
   </footer>
-  <script src="site.js?v=3"></script>
+  <script src="site.js?v=4"></script>
 </body>
 </html>

@@ -116,7 +116,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../styles.css?v=10" />
+  <link rel="stylesheet" href="../styles.css?v=11" />
   <meta name="theme-color" content="#0a1018" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%230a1018' width='32' height='32' rx='8'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%233da1bc'/%3E%3C/svg%3E" />
 </head>
@@ -710,21 +710,22 @@
         <p class="kicker">Success criteria</p>
         <h2>The pilot ends with a process operated by the institution.</h2>
         <p class="lead">The number of participants and one or two primary processes are agreed at the start. Success is not measured by downloading an app, but by completing the workflow with the responsible people.</p>
+        <p class="deliverables-label">Agreed deliverables at month 3</p>
         <div class="success-grid">
           <article class="success-card">
-            <p class="kicker">Month 3 deliverable</p>
+            <p class="kicker">Module 01 · Identity</p>
             <h3>Credentials</h3>
             <ul class="deliverables"><li>Agreed participants credentialed</li><li>Administrators able to issue and revoke</li><li>People able to present and verify</li></ul>
             <span class="deliverable-badge">✓ Workflow completed</span>
           </article>
           <article class="success-card">
-            <p class="kicker">Month 3 deliverable</p>
+            <p class="kicker">Module 02 · Governance</p>
             <h3>Voting or access</h3>
             <ul class="deliverables"><li>One real session opened and operated</li><li>Documented close or log in use</li><li>Operators able to repeat the process</li></ul>
             <span class="deliverable-badge">✓ Exportable record or log</span>
           </article>
           <article class="success-card">
-            <p class="kicker">Month 3 deliverable</p>
+            <p class="kicker">Module 03 · Ticketing</p>
             <h3>Ticketing</h3>
             <ul class="deliverables"><li>Event published with visible rules</li><li>Tickets issued and admissions counted</li><li>Cancellation, refund or split tested</li></ul>
             <span class="deliverable-badge">✓ Test-network operation</span>
@@ -774,18 +775,21 @@
         <div class="legal-badges" aria-label="Legal references">
           <a href="https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf" target="_blank" rel="noopener noreferrer">
             <span>Privacy · private entities</span>
+            <h3>Clear responsibility for personal data</h3>
             <b>LFPDPPP · Articles 21 to 28</b>
             <small><strong>Art. 21:</strong> duty of confidentiality. <strong>Arts. 22–28:</strong> access, rectification, cancellation and objection, including the request to the controller.</small>
             <em>Read the original law ↗</em>
           </a>
           <a href="https://www.diputados.gob.mx/LeyesBiblio/pdf/LGPDPPSO.pdf" target="_blank" rel="noopener noreferrer">
             <span>Privacy · public sector</span>
+            <h3>ARCO rights before public authorities</h3>
             <b>LGPDPPSO · Articles 37 to 41 and 43</b>
             <small><strong>Arts. 37–41:</strong> exercising ARCO rights before obligated public entities. <strong>Art. 43:</strong> request requirements.</small>
             <em>Read the original law ↗</em>
           </a>
           <a href="https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf" target="_blank" rel="noopener noreferrer">
             <span>Digital evidence</span>
+            <h3>Framework for assessing digital evidence</h3>
             <b>CNPCF · Articles 348 to 350</b>
             <small>Rules for recognizing and assessing information contained or recorded in digital media, including a blockchain.</small>
             <em>Read the original code ↗</em>
@@ -887,13 +891,13 @@
             <label><input type="radio" name="via" value="mail" /> Email</label>
           </fieldset>
           <div class="actions">
-            <button class="btn solid" type="submit" data-send>Open WhatsApp with this application</button>
+            <button class="btn solid" type="submit" data-send>Send application by WhatsApp →</button>
           </div>
           <p class="note">Review the prepared message before sending it.</p>
           <div class="ready" data-ready hidden>
             <p data-status></p>
             <p data-summary></p>
-            <button class="btn ghost" type="button" data-copy>Copy application</button>
+            <button class="copy-link" type="button" data-copy>Copy application</button>
           </div>
         </form>
         <aside class="card application-aside">
@@ -982,6 +986,6 @@
     </div>
     <div class="wrap legal">© 2026 <a href="https://peranto.app">Peranto</a> / CiGo. <a href="https://cigo.peranto.app/whitepaper.html">Technical note</a></div>
   </footer>
-  <script src="../site.js?v=3"></script>
+  <script src="../site.js?v=4"></script>
 </body>
 </html>

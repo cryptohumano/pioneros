@@ -215,8 +215,8 @@
     const status = form.querySelector("[data-status]");
     const send = form.querySelector("[data-send]");
     const labelFor = () => (form.querySelector('[name="via"]:checked')?.value === "mail"
-      ? (en ? "Open email with this application" : "Abrir el correo con la postulación")
-      : (en ? "Open WhatsApp with this application" : "Abrir WhatsApp con la postulación"));
+      ? (en ? "Prepare institutional email →" : "Preparar correo institucional →")
+      : (en ? "Send application by WhatsApp →" : "Enviar postulación por WhatsApp →"));
     form.querySelectorAll('[name="via"]').forEach((input) => {
       input.addEventListener("change", () => { send.textContent = labelFor(); });
     });

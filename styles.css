@@ -791,8 +791,9 @@ main > section + section { box-shadow: inset 0 1px 0 var(--line); }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
-  margin-top: 24px;
+  margin-top: 10px;
 }
+.deliverables-label { margin: 24px 0 0; color: var(--deep); font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
 .success-card, .exit-card, .pricing-card, .data-zone {
   border: 1px solid var(--line);
   border-radius: 18px;
@@ -887,6 +888,8 @@ main > section + section { box-shadow: inset 0 1px 0 var(--line); }
 }
 .legal-badges a:hover { border-color: var(--deep); transform: translateY(-2px); }
 .legal-badges span { color: var(--deep); font-family: var(--mono); font-size: 10px; letter-spacing: 0.05em; text-transform: uppercase; }
+.legal-badges h3 { margin: 2px 0 4px; font-size: 20px; line-height: 1.05; }
+.legal-badges b { font-size: 13px; color: var(--deep); }
 .legal-badges small { color: var(--ink-muted); line-height: 1.4; }
 .legal-badges small strong { color: var(--ink); }
 .legal-badges em { align-self: end; color: var(--deep); font-size: 12px; font-style: normal; font-weight: 600; }
@@ -1062,6 +1065,16 @@ td:first-child { color: var(--ink-muted); width: 18%; }
   padding: 14px;
 }
 .ready p { white-space: pre-wrap; margin: 0 0 10px; font-size: 15px; }
+.copy-link {
+  padding: 2px 0;
+  border: 0;
+  border-bottom: 1px solid currentColor;
+  background: transparent;
+  color: var(--deep);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
 
 details {
   background: var(--card);
@@ -1083,8 +1096,9 @@ details p { margin: 8px 0 0; color: var(--ink-muted); }
   font: inherit;
   font-size: 13px;
   cursor: pointer;
+  transition: color 160ms ease, border-color 160ms ease, background-color 160ms ease, transform 160ms ease;
 }
-.faq-filters button:hover { border-color: var(--deep); color: var(--deep); }
+.faq-filters button:hover { border-color: var(--deep); color: var(--deep); transform: translateY(-1px); }
 .faq-filters button[aria-pressed="true"] { border-color: var(--deep); background: var(--deep); color: #fff; }
 .faq-list details { padding: 0; overflow: hidden; }
 .faq-list details[hidden] { display: none; }
@@ -1116,6 +1130,11 @@ details p { margin: 8px 0 0; color: var(--ink-muted); }
 .faq-list details[open] summary::after { content: "−"; }
 .faq-list details[open] summary { border-bottom: 1px solid var(--line); }
 .faq-list details p { margin: 0; padding: 15px 16px 18px; }
+.faq-list details[open] p { animation: faq-reveal 180ms ease-out; }
+@keyframes faq-reveal {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
 .resources-section { padding: 28px 0; background: #eef3f4; }
 .resources-details { margin: 0; padding: 0; overflow: hidden; background: transparent; }
@@ -1260,4 +1279,5 @@ footer .meta { color: rgba(255, 255, 255, 0.5); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .audience-panel:not([hidden]) { animation: none; }
+  .faq-list details[open] p { animation: none; }
 }
