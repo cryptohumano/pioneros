@@ -116,7 +116,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../styles.css?v=11" />
+  <link rel="stylesheet" href="../styles.css?v=12" />
   <meta name="theme-color" content="#0a1018" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%230a1018' width='32' height='32' rx='8'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%233da1bc'/%3E%3C/svg%3E" />
 </head>
@@ -295,18 +295,45 @@
             </div>
           </article>
         </div>
-        <div class="product-showcase platform-showcase" aria-label="Current Door and Tickets screens">
-          <article class="product-proof">
+        <div class="flow-heading">
+          <p class="kicker">Door · the institution's desk</p>
+          <h3>Issue, verify at the door and review the log.</h3>
+          <p>The three screens staff operate during the day: guided issuance, the checkpoint that reads the phone, and the access log exported as CSV.</p>
+        </div>
+        <div class="product-showcase door-showcase" aria-label="Current Door screens">
+          <article class="product-proof featured">
             <div class="proof-media desktop">
-              <img src="../media/door-emision-actual.webp" alt="Current Door desktop screen for issuing a credential" loading="lazy" />
+              <img src="../media/door-emision-actual.webp" alt="Current Door screen for issuing a credential: type, person data, validity and the code that links the phone" loading="lazy" />
             </div>
             <div class="proof-copy">
-              <p class="kicker">Door · operations team</p>
+              <p class="kicker">Door · issue</p>
               <h3>Issue through a guided flow.</h3>
-              <p>Staff prepare data, link the phone identity and deliver the credential from one screen.</p>
-              <a class="text-link" href="#contacto">Request a Door demonstration →</a>
+              <p>Staff pick the credential type, capture data and validity, link the phone identity by QR or NFC and deliver the credential from one screen.</p>
+              <a class="text-link" href="#postular">Request a Door demonstration →</a>
             </div>
           </article>
+          <article class="product-proof">
+            <div class="proof-media desktop">
+              <img src="../media/door-puesto-actual.webp" alt="Current Door checkpoint screen: challenge code, active NFC reader and an access notice with the person's name and credential" loading="lazy" />
+            </div>
+            <div class="proof-copy">
+              <p class="kicker">Door · checkpoint</p>
+              <h3>Verify at the door in seconds.</h3>
+              <p>The checkpoint keeps the code and reader active. When the phone taps, the guard sees whether the person passes, with which credential and until when it is valid.</p>
+            </div>
+          </article>
+          <article class="product-proof">
+            <div class="proof-media desktop">
+              <img src="../media/door-accesos-actual.webp" alt="Current Door access log: daily summary, who is inside now and a table of entries and exits" loading="lazy" />
+            </div>
+            <div class="proof-copy">
+              <p class="kicker">Door · access log</p>
+              <h3>A log that is kept and exported.</h3>
+              <p>Entries, exits and stays for the day, who is inside right now and a CSV download. Everything stays on the institution's computer.</p>
+            </div>
+          </article>
+        </div>
+        <div class="product-showcase tickets-showcase" aria-label="Current Tickets screens">
           <article class="product-proof">
             <div class="proof-media desktop">
               <img src="../media/tickets-cartelera-actual.webp" alt="Current desktop Tickets listings with search, categories and available events" loading="lazy" />
@@ -491,7 +518,7 @@
         <h2>Certainty about who is inside.</h2>
         <p class="lead">Every presentation is written to Access. The desk counts the day, separates entries and exits, and keeps the open visit in front of whoever runs the door.</p>
         <figure class="shot">
-          <img src="../media/escritorio-accesos.png" alt="Access on the CiGo desk: the day's count, who is still inside, and closed visits with their duration" />
+          <img src="../media/door-accesos-actual.webp" alt="Access on the CiGo desk: the day's count, who is still inside, and closed visits with their duration" />
         </figure>
         <div class="facts">
           <article class="card">

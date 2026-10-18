@@ -397,22 +397,58 @@ h3 { margin: 0 0 8px; font-size: 26px; line-height: 1.15; }
   align-items: start;
 }
 .product-showcase.platform-showcase { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.product-showcase.door-showcase,
+.product-showcase.tickets-showcase { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 20px; }
+.door-showcase .product-proof.featured {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+  align-items: center;
+}
+.door-showcase .product-proof.featured .proof-media {
+  height: auto;
+  min-height: 100%;
+  padding: 18px;
+  padding-top: 48px;
+  border-radius: 0;
+}
+.door-showcase .product-proof.featured .proof-media img { height: auto; }
+.door-showcase .product-proof.featured .proof-copy {
+  padding: 28px 32px;
+  flex: none;
+}
+.door-showcase .product-proof.featured .proof-copy h3 { font-size: 30px; max-width: 14ch; }
+.door-showcase .product-proof.featured .proof-copy p:not(.kicker) { font-size: 16px; }
 .voting-steps .product-proof,
-.platform-showcase .product-proof {
+.platform-showcase .product-proof,
+.door-showcase .product-proof,
+.tickets-showcase .product-proof {
   display: flex;
   min-width: 0;
   height: 100%;
   flex-direction: column;
 }
 .voting-steps .proof-media,
-.platform-showcase .proof-media {
+.platform-showcase .proof-media,
+.door-showcase .proof-media,
+.tickets-showcase .proof-media {
   height: 340px;
   padding: 18px;
 }
+.voting-steps .proof-media,
+.platform-showcase .proof-media,
+.door-showcase .proof-media,
+.tickets-showcase .proof-media { grid-template-rows: minmax(0, 1fr); }
+.door-showcase .proof-media,
+.tickets-showcase .proof-media { height: 360px; }
 .voting-steps .proof-media.desktop,
-.platform-showcase .proof-media.desktop { padding-top: 48px; }
+.platform-showcase .proof-media.desktop,
+.door-showcase .proof-media.desktop,
+.tickets-showcase .proof-media.desktop { padding-top: 48px; }
 .voting-steps .proof-media img,
-.platform-showcase .proof-media img {
+.platform-showcase .proof-media img,
+.door-showcase .proof-media img,
+.tickets-showcase .proof-media img {
   width: 100%;
   height: 100%;
   max-height: none;
@@ -421,13 +457,16 @@ h3 { margin: 0 0 8px; font-size: 26px; line-height: 1.15; }
   border-radius: 10px;
 }
 .voting-steps .proof-media.mobile img,
-.platform-showcase .proof-media.mobile img {
+.platform-showcase .proof-media.mobile img,
+.tickets-showcase .proof-media.mobile img {
   width: auto;
   max-width: 100%;
   border-radius: 26px;
 }
 .voting-steps .proof-copy,
-.platform-showcase .proof-copy { flex: 1; }
+.platform-showcase .proof-copy,
+.door-showcase .proof-copy,
+.tickets-showcase .proof-copy { flex: 1; }
 .product-proof {
   overflow: hidden;
   border: 1px solid var(--line);
@@ -1237,16 +1276,28 @@ footer .meta { color: rgba(255, 255, 255, 0.5); }
 @media (max-width: 900px) {
   .hero-layout, .hero-grid, .split, .two, .calc, .close, .cards, .steps, .segments, .suite, .facts, .sim-grid, .door-grid, .foot, .audience-panel, .evidence-grid, .product-showcase, .voting-steps, .pilot-intro, .pilot-responsibilities, .civil-heading, .civil-flow, .civil-pilot, #postular .close, .success-grid, .continuity-grid, .data-map { grid-template-columns: 1fr; }
   .legal-badges { grid-template-columns: 1fr 1fr; }
-  .product-showcase.platform-showcase { grid-template-columns: 1fr; }
+  .product-showcase.platform-showcase,
+  .product-showcase.door-showcase,
+  .product-showcase.tickets-showcase { grid-template-columns: 1fr; }
+  .door-showcase .product-proof.featured { display: flex; flex-direction: column; }
+  .door-showcase .product-proof.featured .proof-media { min-height: 0; }
+  .door-showcase .product-proof.featured .proof-copy { padding: 22px 24px 26px; }
+  .door-showcase .product-proof.featured .proof-copy h3 { font-size: 24px; }
   .hero-brief { max-width: 620px; }
   .audience-tabs {
     display: flex;
-    overflow-x: auto;
+    flex-wrap: wrap;
+    gap: 6px;
     border-bottom: 1px solid var(--line);
     border-radius: 16px;
-    scrollbar-width: thin;
   }
-  .audience-tabs button { flex: 0 0 184px; }
+  .audience-tabs button {
+    flex: 1 1 auto;
+    min-height: 44px;
+    padding: 10px 14px;
+    font-size: 15px;
+  }
+  .audience-tabs button::before { content: none !important; }
   .audience-panel { margin-top: 10px; border: 1px solid var(--line); border-radius: 18px; }
   .pilot-intro .kicker { margin-bottom: -18px; }
   .pilot-timeline { grid-template-columns: 1fr 1fr; }
